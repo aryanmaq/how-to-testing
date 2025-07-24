@@ -156,8 +156,10 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
    <figure><img src="attachment/edit-coll.png" alt="Edit Collection"><figcaption></figcaption></figure>
 
 - **Table View:**
+
    - User can switch to Table View for a tabular representation of data, making it easier to view.
    - Here, users can sort data based on various attributes such as **Name**, **Access**, and **Created Date** for quick access.
+   
    
    <figure><img src="attachment/table-view.png" alt="Table View"><figcaption></figcaption></figure> 
  
