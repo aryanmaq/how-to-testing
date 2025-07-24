@@ -296,6 +296,7 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
 3. **Insights Report:** Click on **Insights Report** tab
 
    <figure><img src="attachment/admin-insight-enter.png" alt="Insight Enter"><figcaption></figcaption></figure>
+
    - Configure the Insights Report by entering the following fields:
      - **Workspace ID:** Unique identifier for the Power BI workspace.
      - **Workspace Name (Optional):** Name for easier identification.
@@ -332,6 +333,7 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
      - Entering a new load count in Current Cluster Load Count (do not exceed the maximum limit).
    
    <figure><img src="attachment/admin-usercount.png" alt="Load Count Settings"><figcaption></figcaption></figure>
+
 6. Click **Apply** button to execute the selected actions.
 
 
@@ -343,6 +345,7 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
 The Insights Report provides detailed performance metrics for load times, down to the visual level.
 
 **Steps:**
+
 1. Click on the **Insight Report** icon in the sidebar.
    
    <figure><img src="attachment/insight-enter.png" alt="Insight Click"><figcaption></figcaption></figure>
@@ -350,9 +353,11 @@ The Insights Report provides detailed performance metrics for load times, down t
 2. Once the report is loaded, select the desired collection from the **Collection Name** slicer.
    
    <figure><img src="attachment/insight-selectcollt.png" alt="Select Collection"><figcaption></figcaption></figure>
+
    - Users can also select additional filters such as **Test Run/Workspace Name/Report Name/Page Name** to refine the output.
 
 3. View the metrics for the selected slicers:
+
    - **Tests:** Displays the total number of tests conducted for the selected collection.
    - **Reports:** Shows the total number of reports tested.
    - **Pages:** Indicates the total number of pages tested.
@@ -364,17 +369,21 @@ The Insights Report provides detailed performance metrics for load times, down t
    <figure><img src="attachment/insight-metric.png" alt="Metric Summary"><figcaption></figcaption></figure>
 
 4. Below the metrics, view the **Bar Chart** and **Line Chart**:
+
    - **AVG PLT Across Tests (Bar Chart):** Displays a bar chart showing the average page load time for each test run.  
+
      - Each bar represents the average page load time for a specific test run, 1st Bar indicate specific run has higher load time and need optimization.
      
      <figure><img src="attachment/insight-graph-bar.png" alt="Bar Chart Summary"><figcaption></figcaption></figure>
    
    - **AVG Load Time and Percentile (Line Chart):** This chart shows how average load times and percentiles change across test runs.
+
      - The chart shows how average load time change across test runs, the shaded area highlights the trend and the points show the average load time for each run.
      
      <figure><img src="attachment/insight-graph.png" alt="Line Chart Summary"><figcaption></figcaption></figure>
 
 5. Scroll down to the **Page & Visual Details Table** to see detailed information about the collection:
+
    - **Test Run:** Lists the test runs conducted.
    - **Report Name:** Displays the name of the report associated with the test run.
    - **Page Name:** Indicates the specific page tested.
@@ -388,12 +397,14 @@ The Insights Report provides detailed performance metrics for load times, down t
    <figure><img src="attachment/insight-table.png" alt="Insight Report Table"><figcaption></figcaption></figure>
 
 6. To drill through for a detailed view:
+
    - Right-click on **Test Run/Report Name/Page Name/Visual Name**.
    - Select **Drill Through** from the dropdown, then choose **User Action** or **Visual** to view detailed metrics instead of average.
    
      <figure><img src="attachment/Insight-drillthrough.png" alt="Drill-Through"><figcaption></figcaption></figure>
 
 7. Drill-through options:
+
    - **User Action:** Analyze specific user interactions applied during the test run.
    
      <figure><img src="attachment/insight-useraction1.png" alt="User Action"><figcaption></figcaption></figure>
@@ -422,6 +433,7 @@ The Insights Report provides detailed performance metrics for load times, down t
 The **Capacity Report** provides a comprehensive overview of compute and storage usage across your Microsoft Fabric environment. It includes detailed visualizations, usage metrics, and interactive charts that help monitor capacity performance, detect overages, prevent throttling, and manage storage consumption efficiently.
 
 **Steps:**
+
 1. Click the **Capacity Report** icon in the left sidebar.
 
    <figure><img src="attachment/capacity-enter.png" alt="Select Capacity Report"><figcaption></figcaption></figure>
