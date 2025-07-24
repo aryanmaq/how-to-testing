@@ -112,7 +112,8 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
    **Steps:**
    - Click on **Configure RLS** button.
    
-     <figure><img src="attachment/coll-click-config-rls.png" alt="Configure RLS"><figcaption></figcaption></figure>
+
+    <figure><img src="attachment/coll-click-config-rls.png" alt="Configure RLS"><figcaption></figcaption></figure>
    
    - Select **Role Name** from Dropdown box
    - Enter the **Email** address.
@@ -136,13 +137,13 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
       - Click on the dropdown arrow next to the report name, then you will see **+** in the add user action column for each page.
       - Click on the **+** icon to apply user action.
       
-      <figure><img src="attachment/coll-user-action-rls.png" alt="User Action RLS"><figcaption></figcaption></figure>
+        <figure><img src="attachment/coll-user-action-rls.png" alt="User Action RLS"><figcaption></figcaption></figure>
 
 1. **Review and Finalize:**
    - Ensure all desired reports/pages are selected.
    - Click **Create Collection** to create your collection.
    
-   <figure><img src="attachment/create-button.png" alt="Create Button"><figcaption></figcaption></figure>
+     <figure><img src="attachment/create-button.png" alt="Create Button"><figcaption></figcaption></figure>
 
 **Additional Functionalities:**
 
@@ -161,7 +162,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
    - Here, users can sort data based on various attributes such as **Name**, **Access**, and **Created Date** for quick access.
    
 
-   <figure><img src="attachment/table-view.png" alt="Table View"><figcaption></figcaption></figure> 
+     <figure><img src="attachment/table-view.png" alt="Table View"><figcaption></figcaption></figure> 
  
 
 ### Create Test Run
@@ -173,16 +174,16 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
 
     - Click on created collection to enter detail page.
     
-    <figure><img src="attachment/coll-click.png" alt="Enter Collection detailed Page"><figcaption></figcaption></figure>
+      <figure><img src="attachment/coll-click.png" alt="Enter Collection detailed Page"><figcaption></figcaption></figure>
 
 1. **Click on + New Test:**
     - On your collection’s detail page, click the **+ New Test** button to start creating a new test run.
   
-    <figure><img src="attachment/coll-create-test.png" alt="Create Test Run"><figcaption></figcaption></figure>
+      <figure><img src="attachment/coll-create-test.png" alt="Create Test Run"><figcaption></figcaption></figure>
 
 1. **Select Load Test:** Enter the desired user count. 
 
-   <figure><img src="attachment/test-type.png" alt="Enter Test Details"><figcaption></figcaption></figure>
+     <figure><img src="attachment/test-type.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
 2. **Enter Test Details:**
 
@@ -210,7 +211,7 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
    
    - After entering the test details, click **Save Test** to proceed.
    
-   <figure><img src="attachment/test-enter-detail.png" alt="Enter Test Details"><figcaption></figcaption></figure>
+     <figure><img src="attachment/test-enter-detail.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
 3. **Review and Trigger Test Run:**
 
@@ -230,11 +231,11 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
      - **90th Percentile:** Represents the page load time below which 90% of the test results fall. This helps identify outliers and gives a realistic view of user experience.
    - Click on the **+** icon to the left of the created test run name to expand and view all the triggered runs for that Test Run, including their individual statuses and metrics.
    
-   <figure><img src="attachment/test-triggered-res.png" alt="Test Results"><figcaption></figcaption></figure>
+     <figure><img src="attachment/test-triggered-res.png" alt="Test Results"><figcaption></figcaption></figure>
    
    - It displays the executed result of each run.
    
-   <figure><img src="attachment/test-triggered.png" alt="Test Results Detailed"><figcaption></figcaption></figure>
+     <figure><img src="attachment/test-triggered.png" alt="Test Results Detailed"><figcaption></figcaption></figure>
 
 
 ### All Tests
@@ -244,15 +245,15 @@ The All Tests page allows users to view all test runs created across different c
 
 1. Click on the **All Tests** icon from the sidebar.
 
-   <figure><img src="attachment/all-test.png" alt="Select All test"><figcaption></figcaption></figure>
+     <figure><img src="attachment/all-test.png" alt="Select All test"><figcaption></figcaption></figure>
 
 2. **Select Collection:** By default, all tests from all collections are shown.
    
-   <figure><img src="attachment/all-test-select.png" alt="Select Collection"><figcaption></figcaption></figure>
+     <figure><img src="attachment/all-test-select.png" alt="Select Collection"><figcaption></figcaption></figure>
    
    - Select a collection from the dropdown to view test runs specific to that collection.
    
-   <figure><img src="attachment/all-test-selected.png" alt="Collection Selected"><figcaption></figcaption></figure>
+     <figure><img src="attachment/all-test-selected.png" alt="Collection Selected"><figcaption></figcaption></figure>
 
 
 ### Admin Settings
