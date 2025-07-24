@@ -35,7 +35,7 @@ LoadFAST is a load testing tool for Power BI reports that uses virtual users to 
  - Open the LoadFAST web URL in your browser.
  - Choose your account and complete authentication to access the tool.
 
-   <figure><img src="attachment/auth.png" alt="Login Page"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/auth.png" alt="Login Page"><figcaption></figcaption></figure>
 
 
 
@@ -50,7 +50,7 @@ The side panel consists of the following options:
 - **Insight Report:** Access detailed insights of collections.
 - **Capacity Report:** Analyze capacity usage and optimization metrics.
 
-<figure><img src="attachment/side-panel.png" alt="Side Panel"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/attachment/side-panel.png" alt="Side Panel"><figcaption></figcaption></figure>
   
 ### Header
 It consists of the following options:
@@ -58,7 +58,7 @@ It consists of the following options:
 - **Info icon (i) button:** Redirects user to tool setup documentation.
 - **User Settings:** Allows user to view account information and log out.
 
-<figure><img src="attachment/header.png" alt="Header"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/attachment/header.png" alt="Header"><figcaption></figcaption></figure>
   
 ### Main Content Area
 After clicking **Get Started**, the user will be directed to the main content area that serves as the central hub for LoadFAST.
@@ -70,7 +70,7 @@ After clicking **Get Started**, the user will be directed to the main content ar
 - **Search bar:** Use for finding a specific collection.
 - **Filter:** Use for filtering collections (e.g., sort by Name, Report Count, time)
 
-<figure><img src="attachment/main-nav.png" alt="Main Page"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/attachment/main-nav.png" alt="Main Page"><figcaption></figcaption></figure>
 
 
 
@@ -84,7 +84,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
 1. **Click on + New Collection:**
    - On the Collections page, click the **+ New Collection** button to start creating a new collection.
 
-   <figure><img src="attachment/create-collect.png" alt="Create Collection"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/create-collect.png" alt="Create Collection"><figcaption></figcaption></figure>
 
 2. **Enter Collection Details:**
    - Provide a name for your collection in the **Collection Name** field.
@@ -97,7 +97,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
       **Note:** The **Continue** button will remain disabled until a valid collaborator email address is provided.
    
 
-   <figure><img src="attachment/coll-enterdetail.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/coll-enterdetail.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
 
 3. **Select Reports and Pages:**
 
@@ -106,14 +106,14 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
    - Select the reports and pages you want to include by **checking the boxes** next to them.
    - RLS report is indicated with an icon.
    
-   <figure><img src="attachment/coll-select-rep.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/coll-select-rep.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
 
 4. **Configure RLS (If RLS report is selected)**
    **Steps:**
    - Click on **Configure RLS** button.
    
 
-    <figure><img src="attachment/coll-click-config-rls.png" alt="Configure RLS"><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/attachment/coll-click-config-rls.png" alt="Configure RLS"><figcaption></figcaption></figure>
    
    - Select **Role Name** from Dropdown box
    - Enter the **Email** address.
@@ -121,7 +121,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
      **Note:** *If you are an Admin, you can test on behalf of any user else your own email will be selected by default.*
 
       
-      <figure><img src="attachment/coll-conf-RLS.png" alt="Enter Collection Details - Default"><figcaption></figcaption></figure>
+      <figure><img src="../.gitbook/assets/attachment/coll-conf-RLS.png" alt="Enter Collection Details - Default"><figcaption></figcaption></figure>
 
 5. **Add User Action:**
   While selecting a report, users can add simple actions like filtering or slicing. These actions are used to calculate the Page Load Time (PLT) based on the selected interactions, providing more accurate performance metrics.
@@ -130,20 +130,20 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
    - Click on the dropdown arrow next to the report name, then you will see **+** in user action for each page.
    - Click on the **+** icon to apply user action.
       
-      <figure><img src="attachment/coll-user-action.png" alt="User Action"><figcaption></figcaption></figure>
+      <figure><img src="../.gitbook/assets/attachment/coll-user-action.png" alt="User Action"><figcaption></figcaption></figure>
    
    - For **RLS Report** User Action will be available after RLS configuration.
       - After filling **Role Name** and **Role Email ID**.
       - Click on the dropdown arrow next to the report name, then you will see **+** in the add user action column for each page.
       - Click on the **+** icon to apply user action.
       
-        <figure><img src="attachment/coll-user-action-rls.png" alt="User Action RLS"><figcaption></figcaption></figure>
+        <figure><img src="../.gitbook/assets/attachment/coll-user-action-rls.png" alt="User Action RLS"><figcaption></figcaption></figure>
 
 1. **Review and Finalize:**
    - Ensure all desired reports/pages are selected.
    - Click **Create Collection** to create your collection.
    
-     <figure><img src="attachment/create-button.png" alt="Create Button"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/create-button.png" alt="Create Button"><figcaption></figcaption></figure>
 
 **Additional Functionalities:**
 
@@ -154,7 +154,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
      **Note:** Report can be updated only when no Test Run is Created/Triggered inside the collection.
    
    
-   <figure><img src="attachment/edit-coll.png" alt="Edit Collection"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/edit-coll.png" alt="Edit Collection"><figcaption></figcaption></figure>
 
 - **Table View:**
 
@@ -162,7 +162,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
    - Here, users can sort data based on various attributes such as **Name**, **Access**, and **Created Date** for quick access.
    
 
-     <figure><img src="attachment/table-view.png" alt="Table View"><figcaption></figcaption></figure> 
+     <figure><img src="../.gitbook/assets/attachment/table-view.png" alt="Table View"><figcaption></figcaption></figure> 
  
 
 ### Create Test Run
@@ -174,16 +174,16 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
 
     - Click on created collection to enter detail page.
     
-      <figure><img src="attachment/coll-click.png" alt="Enter Collection detailed Page"><figcaption></figcaption></figure>
+      <figure><img src="../.gitbook/assets/attachment/coll-click.png" alt="Enter Collection detailed Page"><figcaption></figcaption></figure>
 
 1. **Click on + New Test:**
     - On your collection’s detail page, click the **+ New Test** button to start creating a new test run.
   
-      <figure><img src="attachment/coll-create-test.png" alt="Create Test Run"><figcaption></figcaption></figure>
+      <figure><img src="../.gitbook/assets/attachment/coll-create-test.png" alt="Create Test Run"><figcaption></figcaption></figure>
 
 1. **Select Load Test:** Enter the desired user count. 
 
-     <figure><img src="attachment/test-type.png" alt="Enter Test Details"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/test-type.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
 2. **Enter Test Details:**
 
@@ -196,7 +196,7 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
          - "Retail Analysis" has 4 pages, so it will receive 4 × 5 = 20 users.
          - The total load count will be calculated as 10 + 20 = 30 users.
          
-         <figure><img src="attachment/test-apply-all.png" alt="Apply to All option"><figcaption></figcaption></figure>
+         <figure><img src="../.gitbook/assets/attachment/test-apply-all.png" alt="Apply to All option"><figcaption></figcaption></figure>
      
      - **Percentage Split:** Customizable distribute user count to all reports
      **Example:** If you enter 10 users and allocate percentages as follows:
@@ -207,11 +207,11 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
          **Note:** Ensure the "Total Percentage Count: Effective" is 100.
          
          
-         <figure><img src="attachment/test-per-split.png" alt="Percentage Split option"><figcaption></figcaption></figure>
+         <figure><img src="../.gitbook/assets/attachment/test-per-split.png" alt="Percentage Split option"><figcaption></figcaption></figure>
    
    - After entering the test details, click **Save Test** to proceed.
    
-     <figure><img src="attachment/test-enter-detail.png" alt="Enter Test Details"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/test-enter-detail.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
 3. **Review and Trigger Test Run:**
 
@@ -219,7 +219,7 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
    - Click the **Trigger** button to initiate the test run.
       - It will calculate the Average Page Load Time (Avg PLT) and the 90th percentile, updating the Run Status based on the specified Load Count.
       
-      <figure><img src="attachment/test-created.png" alt="Created Test"><figcaption></figcaption></figure>
+      <figure><img src="../.gitbook/assets/attachment/test-created.png" alt="Created Test"><figcaption></figcaption></figure>
 
 4. **Monitor Test Progress and Results:**
 
@@ -231,11 +231,11 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
      - **90th Percentile:** Represents the page load time below which 90% of the test results fall. This helps identify outliers and gives a realistic view of user experience.
    - Click on the **+** icon to the left of the created test run name to expand and view all the triggered runs for that Test Run, including their individual statuses and metrics.
    
-     <figure><img src="attachment/test-triggered-res.png" alt="Test Results"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/test-triggered-res.png" alt="Test Results"><figcaption></figcaption></figure>
    
    - It displays the executed result of each run.
    
-     <figure><img src="attachment/test-triggered.png" alt="Test Results Detailed"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/test-triggered.png" alt="Test Results Detailed"><figcaption></figcaption></figure>
 
 
 ### All Tests
@@ -245,15 +245,15 @@ The All Tests page allows users to view all test runs created across different c
 
 1. Click on the **All Tests** icon from the sidebar.
 
-     <figure><img src="attachment/all-test.png" alt="Select All test"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/all-test.png" alt="Select All test"><figcaption></figcaption></figure>
 
 2. **Select Collection:** By default, all tests from all collections are shown.
    
-     <figure><img src="attachment/all-test-select.png" alt="Select Collection"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/all-test-select.png" alt="Select Collection"><figcaption></figcaption></figure>
    
    - Select a collection from the dropdown to view test runs specific to that collection.
    
-     <figure><img src="attachment/all-test-selected.png" alt="Collection Selected"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/all-test-selected.png" alt="Collection Selected"><figcaption></figcaption></figure>
 
 
 ### Admin Settings
@@ -263,21 +263,21 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
 
 1. Click on the **Admin Settings** icon from the sidebar.
 
-     <figure><img src="attachment/admin-enter.png" alt="Select Admin Settings"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/admin-enter.png" alt="Select Admin Settings"><figcaption></figcaption></figure>
 
 2. **Cluster Management:**
    - Select a **cluster** from the dropdown.
    
-     <figure><img src="attachment/admin-select-cluster.png" alt="Select Cluster"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/admin-select-cluster.png" alt="Select Cluster"><figcaption></figcaption></figure>
 
    - View the cluster’s current status.
      - Below it will show the status of the cluster On/Off.
      
-       <figure><img src="attachment/admin-cluster-status.png" alt="Cluster Status"><figcaption></figcaption></figure>
+       <figure><img src="../.gitbook/assets/attachment/admin-cluster-status.png" alt="Cluster Status"><figcaption></figcaption></figure>
 
    - Choose a management type (Auto, Manual).
    
-     <figure><img src="attachment/admin-cluster.png" alt="Select Type"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/admin-cluster.png" alt="Select Type"><figcaption></figcaption></figure>
      
      - **Auto:** The cluster will automatically shut down after the **Specified Hours** of inactivity.
         - To apply this setting, toggle the button **ON** and specify the number of **Hours** after which the cluster should shut down.
@@ -286,17 +286,17 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
         **Note:** When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.
         
         
-        <figure><img src="attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
+        <figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
      
      - **Manual:** To turn the cluster ON/OFF.
         - Click the toggle button to turn the cluster ON/OFF.
         
-        <figure><img src="attachment/admin-manual-off.png" alt="Manually Off"><figcaption></figcaption></figure>
+        <figure><img src="../.gitbook/assets/attachment/admin-manual-off.png" alt="Manually Off"><figcaption></figcaption></figure>
 
 
 3. **Insights Report:** Click on **Insights Report** tab
 
-   <figure><img src="attachment/admin-insight-enter.png" alt="Insight Enter"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/admin-insight-enter.png" alt="Insight Enter"><figcaption></figcaption></figure>
 
    - Configure the Insights Report by entering the following fields:
      - **Workspace ID:** Unique identifier for the Power BI workspace.
@@ -311,29 +311,29 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
      - The report and its dataset must also be in the same workspace.
      
      
-    <figure><img src="attachment/admin-insight.png" alt="Insight Report"><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/attachment/admin-insight.png" alt="Insight Report"><figcaption></figcaption></figure>
 
 4. **Capacity Report:** Click on the **Capacity Report** tab.
 
-    <figure><img src="attachment/admin-capapcity-enter.png" alt="Select Capacity"><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/attachment/admin-capapcity-enter.png" alt="Select Capacity"><figcaption></figcaption></figure>
    
    - Set up the Capacity Report by providing:
      - **Workspace ID** and **Workspace Name (Optional)**
      - **Report ID** and **Dataset ID**
      - **Dataset Name (Optional):** e.g., Microsoft Fabric Capacity Metrics
    
-    <figure><img src="attachment/admin-cap-insi.png" alt="Capacity Report"><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/attachment/admin-cap-insi.png" alt="Capacity Report"><figcaption></figcaption></figure>
 
 5. **Load Count:** Click on the **Load Count** tab.
 
-   <figure><img src="attachment/admin-load-enter.png" alt="Load Count"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/admin-load-enter.png" alt="Load Count"><figcaption></figcaption></figure>
    
    - Update the cluster's load count by:
      - Selecting the cluster from the dropdown.
      - Viewing the maximum allowed limit.
      - Entering a new load count in Current Cluster Load Count (do not exceed the maximum limit).
    
-   <figure><img src="attachment/admin-usercount.png" alt="Load Count Settings"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/admin-usercount.png" alt="Load Count Settings"><figcaption></figcaption></figure>
 
 6. Click **Apply** button to execute the selected actions.
 
@@ -349,11 +349,11 @@ The Insights Report provides detailed performance metrics for load times, down t
 
 1. Click on the **Insight Report** icon in the sidebar.
    
-   <figure><img src="attachment/insight-enter.png" alt="Insight Click"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/insight-enter.png" alt="Insight Click"><figcaption></figcaption></figure>
 
 2. Once the report is loaded, select the desired collection from the **Collection Name** slicer.
    
-   <figure><img src="attachment/insight-selectcollt.png" alt="Select Collection"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/insight-selectcollt.png" alt="Select Collection"><figcaption></figcaption></figure>
 
    - Users can also select additional filters such as **Test Run/Workspace Name/Report Name/Page Name** to refine the output.
 
@@ -367,7 +367,7 @@ The Insights Report provides detailed performance metrics for load times, down t
    - **Most Expensive Visual:** Highlights the visual element with the highest load time.
    - **Test Name and Test Run:** Displays the test name and run associated with the most expensive visual.
    
-   <figure><img src="attachment/insight-metric.png" alt="Metric Summary"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/insight-metric.png" alt="Metric Summary"><figcaption></figcaption></figure>
 
 4. Below the metrics, view the **Bar Chart** and **Line Chart**:
 
@@ -375,13 +375,13 @@ The Insights Report provides detailed performance metrics for load times, down t
 
      - Each bar represents the average page load time for a specific test run, 1st Bar indicate specific run has higher load time and need optimization.
      
-     <figure><img src="attachment/insight-graph-bar.png" alt="Bar Chart Summary"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/insight-graph-bar.png" alt="Bar Chart Summary"><figcaption></figcaption></figure>
    
    - **AVG Load Time and Percentile (Line Chart):** This chart shows how average load times and percentiles change across test runs.
 
      - The chart shows how average load time change across test runs, the shaded area highlights the trend and the points show the average load time for each run.
      
-     <figure><img src="attachment/insight-graph.png" alt="Line Chart Summary"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/insight-graph.png" alt="Line Chart Summary"><figcaption></figcaption></figure>
 
 5. Scroll down to the **Page & Visual Details Table** to see detailed information about the collection:
 
@@ -395,36 +395,36 @@ The Insights Report provides detailed performance metrics for load times, down t
    - **Page/Visual PLT:** Shows the page or visual load time.
    - **UA:** Displays if any user action is applied.
    
-   <figure><img src="attachment/insight-table.png" alt="Insight Report Table"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/insight-table.png" alt="Insight Report Table"><figcaption></figcaption></figure>
 
 6. To drill through for a detailed view:
 
    - Right-click on **Test Run/Report Name/Page Name/Visual Name**.
    - Select **Drill Through** from the dropdown, then choose **User Action** or **Visual** to view detailed metrics instead of average.
    
-     <figure><img src="attachment/Insight-drillthrough.png" alt="Drill-Through"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/Insight-drillthrough.png" alt="Drill-Through"><figcaption></figcaption></figure>
 
 7. Drill-through options:
 
    - **User Action:** Analyze specific user interactions applied during the test run.
    
-     <figure><img src="attachment/insight-useraction1.png" alt="User Action"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/insight-useraction1.png" alt="User Action"><figcaption></figcaption></figure>
      
      - After clicking, you will see a detailed view of the selected interaction.
      
-       <figure><img src="attachment/insight-useraction2.png" alt="User Action Result"><figcaption></figcaption></figure>
+       <figure><img src="../.gitbook/assets/attachment/insight-useraction2.png" alt="User Action Result"><figcaption></figcaption></figure>
    
    - **Visual:** Focus on individual visuals within a report for detailed performance metrics.
    
-     <figure><img src="attachment/insight-9.png" alt="Visual"><figcaption></figcaption></figure>
+     <figure><img src="../.gitbook/assets/attachment/insight-9.png" alt="Visual"><figcaption></figcaption></figure>
      
      - After clicking, you will see a detailed view of the selected visual.
      
-       <figure><img src="attachment/insight-visual-res.png" alt="Visual Detail"><figcaption></figcaption></figure>
+       <figure><img src="../.gitbook/assets/attachment/insight-visual-res.png" alt="Visual Detail"><figcaption></figcaption></figure>
 
 8. Click the **Back** button to return to the previous view.
    
-   <figure><img src="attachment/insight-back.png" alt="Back button"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/insight-back.png" alt="Back button"><figcaption></figcaption></figure>
 
 
 
@@ -435,11 +435,11 @@ The **Capacity Report** provides a comprehensive overview of compute and storage
 
 1. Click the **Capacity Report** icon in the left sidebar.
 
-   <figure><img src="attachment/capacity-enter.png" alt="Select Capacity Report"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/capacity-enter.png" alt="Select Capacity Report"><figcaption></figcaption></figure>
 
 2. Select the **Capacity Name** from dropdown (e.g., `maqsoftwarefabric`).
 
-   <figure><img src="attachment/capacity-select.png" alt="Select Capacity Name"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/capacity-select.png" alt="Select Capacity Name"><figcaption></figcaption></figure>
 
 3. Use the tabs to explore different categories of metrics.
    
