@@ -1,0 +1,1515 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Your API",
+        "version": "v1"
+    },
+    "paths": {
+        "/CreateTableConfig/CreateTable": {
+            "get": {
+                "tags": [
+                    "CreateTableConfig"
+                ],
+                "summary": "API endpoint to create database tables.",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/Embed/EmbedTokenSave": {
+            "post": {
+                "tags": [
+                    "Embed"
+                ],
+                "summary": "Saves the Embed Token details for a specified workspace.\r\nThis method retrieves the Embed Token details from the database using the provided workspace ID.",
+                "parameters": [
+                    {
+                        "name": "urlWorkspaceId",
+                        "in": "query",
+                        "description": "The Workspace ID for which the Embed Token details are being saved.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the Embed Token details for the specified workspace."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided WorkspaceId is invalid or empty."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while saving the Embed Token details."
+                    }
+                }
+            }
+        },
+        "/Embed/GetEmbedInfo": {
+            "get": {
+                "tags": [
+                    "Embed"
+                ],
+                "summary": "Gets the embed information for a specific Power BI report.",
+                "parameters": [
+                    {
+                        "name": "workSpaceId",
+                        "in": "query",
+                        "description": "The workspace ID of the report.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "reportId",
+                        "in": "query",
+                        "description": "The report ID for which the embed parameters are requested.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the embed parameters for the specified Power BI report."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided workspace or report ID is invalid or missing."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An unexpected error occurred while fetching the embed parameters."
+                    }
+                }
+            }
+        },
+        "/Embed/GetRLSEmbedInfo": {
+            "get": {
+                "tags": [
+                    "Embed"
+                ],
+                "summary": "Retrieves embed parameters for a Power BI report with RLS applied, generating an embed token based on the workspace, report, dataset, and role information",
+                "parameters": [
+                    {
+                        "name": "workSpaceId",
+                        "in": "query",
+                        "description": "The workspace ID where the Power BI report is located.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "reportId",
+                        "in": "query",
+                        "description": "The report ID for which the embed parameters are to be retrieved.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "datasetId",
+                        "in": "query",
+                        "description": "The dataset ID associated with the Power BI report.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "roleName",
+                        "in": "query",
+                        "description": "The name of the role to apply for Row-Level Security (RLS) in the Power BI report.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "roleValue",
+                        "in": "query",
+                        "description": "The value of the role to be applied for RLS in the Power BI report.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the embed parameters for the specified Power BI report with RLS."
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid or missing parameters in the request."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while fetching the embed parameters."
+                    }
+                }
+            }
+        },
+        "/Embed/GetEmbedInfoForWorkspace": {
+            "get": {
+                "tags": [
+                    "Embed"
+                ],
+                "summary": "Gets the embed information for all reports within a specific workspace.",
+                "parameters": [
+                    {
+                        "name": "workSpaceId",
+                        "in": "query",
+                        "description": "The workspace ID for which to fetch embed parameters for all reports.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "reportId",
+                        "in": "query",
+                        "description": "The report ID for which the embed parameters are to be retrieved.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns embed parameters for all reports in the workspace."
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid workspace ID or parameters."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An unexpected error occurred while fetching the embed parameters."
+                    }
+                }
+            }
+        },
+        "/Embed/GetAADToken": {
+            "get": {
+                "tags": [
+                    "Embed"
+                ],
+                "summary": "Retrieves an Azure Active Directory (AAD) access token, caching it for future use to avoid redundant calls.",
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the access token and expiration information."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An unexpected error occurred while fetching the AAD token."
+                    }
+                }
+            }
+        },
+        "/Embed/GetAllUserAADToken": {
+            "get": {
+                "tags": [
+                    "Embed"
+                ],
+                "summary": "Retrieves an Azure Active Directory (AAD) access token and uses it to search for users in the Microsoft Graph API based on a search query.",
+                "parameters": [
+                    {
+                        "name": "searchQuery",
+                        "in": "query",
+                        "description": "The query string used to search for users by their display name or email address in Azure Active Directory.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the list of users that match the search query."
+                    },
+                    "401": {
+                        "description": "Unauthorized: Failed to retrieve the access token from Azure Active Directory."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An unexpected error occurred while fetching the access token or querying Microsoft Graph API."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/GetKubernetesClusterStatus": {
+            "get": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Fetches the Kubernetes cluster status",
+                "parameters": [
+                    {
+                        "name": "subscriptionId",
+                        "in": "query",
+                        "description": "The ID of the subscription where the Kubernetes cluster is located.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "resourceGroupName",
+                        "in": "query",
+                        "description": "The name of the resource group containing the Kubernetes cluster.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "clusterName",
+                        "in": "query",
+                        "description": "The name of the Kubernetes cluster to be stopped.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Kubernetes Cluster status fetched."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while fetching the status."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/GetKubernetesClustersInResourceGroup": {
+            "get": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Fetches all Kubernetes cluster in Resource Group",
+                "parameters": [
+                    {
+                        "name": "subscriptionId",
+                        "in": "query",
+                        "description": "The ID of the subscription where the Kubernetes cluster is located.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "resourceGroupName",
+                        "in": "query",
+                        "description": "The name of the resource group containing the Kubernetes cluster.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Kubernetes Cluster status fetched."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while fetching the status."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/StartKubernetesCluster": {
+            "post": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Starts a Kubernetes cluster based on the provided subscription ID, resource group name, and cluster name.",
+                "parameters": [
+                    {
+                        "name": "subscriptionId",
+                        "in": "query",
+                        "description": "The ID of the subscription where the Kubernetes cluster is located.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "resourceGroupName",
+                        "in": "query",
+                        "description": "The name of the resource group containing the Kubernetes cluster.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "clusterName",
+                        "in": "query",
+                        "description": "The name of the Kubernetes cluster to be started.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The Kubernetes cluster has been successfully started."
+                    },
+                    "400": {
+                        "description": "Bad Request: The request failed due to invalid or missing parameters."
+                    },
+                    "404": {
+                        "description": "Not Found: The specified Kubernetes cluster or resource group could not be found."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while attempting to start the Kubernetes cluster."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/StopKubernetesCluster": {
+            "post": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Stops a Kubernetes cluster based on the provided subscription ID, resource group name, and cluster name.",
+                "parameters": [
+                    {
+                        "name": "subscriptionId",
+                        "in": "query",
+                        "description": "The ID of the subscription where the Kubernetes cluster is located.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "resourceGroupName",
+                        "in": "query",
+                        "description": "The name of the resource group containing the Kubernetes cluster.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "clusterName",
+                        "in": "query",
+                        "description": "The name of the Kubernetes cluster to be stopped.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The Kubernetes cluster has been successfully stopped."
+                    },
+                    "400": {
+                        "description": "Bad Request: The request failed due to invalid or missing parameters."
+                    },
+                    "404": {
+                        "description": "Not Found: The specified Kubernetes cluster or resource group could not be found."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while attempting to stop the Kubernetes cluster."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/ScaleUpNodePool": {
+            "post": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Scales up the node pool of a Kubernetes cluster based on the provided parameters.",
+                "parameters": [
+                    {
+                        "name": "subscriptionId",
+                        "in": "query",
+                        "description": "The ID of the subscription where the Kubernetes cluster is located.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "resourceGroupName",
+                        "in": "query",
+                        "description": "The name of the resource group containing the Kubernetes cluster.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "clusterName",
+                        "in": "query",
+                        "description": "The name of the Kubernetes cluster to scale up.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "agentPoolName",
+                        "in": "query",
+                        "description": "The name of the agent pool to scale up within the cluster.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nodeCount",
+                        "in": "query",
+                        "description": "The desired number of nodes to scale the agent pool to.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "userLoadInput",
+                        "in": "query",
+                        "description": "The user load input, which can influence the scaling decision.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The Kubernetes node pool has been successfully scaled up."
+                    },
+                    "400": {
+                        "description": "Bad Request: The request failed due to invalid or missing parameters."
+                    },
+                    "404": {
+                        "description": "Not Found: The specified Kubernetes cluster, resource group, or agent pool could not be found."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while attempting to scale the node pool."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/UpdateKubernetesClusterStatus": {
+            "post": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Updates the status of a Kubernetes cluster by acquiring an access token for authentication.",
+                "responses": {
+                    "200": {
+                        "description": "Success: The Kubernetes cluster status has been successfully updated."
+                    },
+                    "400": {
+                        "description": "Bad Request: The request failed due to invalid or missing parameters."
+                    },
+                    "401": {
+                        "description": "Unauthorized: The request failed due to authentication issues when acquiring the access token."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while updating the Kubernetes cluster status."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/UpdatePLTKubeConfigField": {
+            "get": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Updates the PLT Kubernetes configuration fields based on the provided parameters.",
+                "parameters": [
+                    {
+                        "name": "currentNodeCount",
+                        "in": "query",
+                        "description": "The current number of nodes in the Kubernetes cluster.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "currentUserLoadCount",
+                        "in": "query",
+                        "description": "The current user load count in the system.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "clusterStartTime",
+                        "in": "query",
+                        "description": "The start time of the Kubernetes cluster.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "inactivitynewValue",
+                        "in": "query",
+                        "description": "The new inactivity value to be set for the system.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the updated Kubernetes configuration fields."
+                    },
+                    "400": {
+                        "description": "Bad Request: The request failed due to invalid or missing parameter values."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while updating the Kubernetes configuration in the database."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/GetKubernetesResource": {
+            "get": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Retrieves the Kubernetes resource information.",
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the details of the Kubernetes resources."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while retrieving Kubernetes resource information from the database."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/GETInactivityState": {
+            "get": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Retrieves the current inactivity state.",
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the current inactivity state information."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while retrieving the inactivity state from the database."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/UpdateInactivityState": {
+            "put": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Updates the inactivity state based on the provided inactivity state value.",
+                "parameters": [
+                    {
+                        "name": "inactivityState",
+                        "in": "query",
+                        "description": "The new inactivity state to be set. If null or empty, the inactivity state will be set to a DBNull value.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the updated inactivity state information."
+                    },
+                    "400": {
+                        "description": "Bad Request: The request failed due to invalid or missing inactivity state value."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while updating the inactivity state in the database."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/updateInactivityStateAndHours": {
+            "put": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Updates the inactivity state and inactivity time for the Kubernetes cluster.",
+                "requestBody": {
+                    "description": "The model containing the new inactivity state and inactivity time value.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KuberenetesInactivity"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KuberenetesInactivity"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KuberenetesInactivity"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success: The inactivity state and inactivity time were successfully updated."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided model is invalid."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while updating the inactivity state and time."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/UpdateClusterStartTime": {
+            "put": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Updates the cluster's start time in the database.",
+                "parameters": [
+                    {
+                        "name": "newClusterStartTime",
+                        "in": "query",
+                        "description": "The new start time for the cluster.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The cluster start time was successfully updated."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided cluster start time is invalid."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while updating the cluster start time."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/GetLoadCount": {
+            "get": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Retrieves the current load count from the database.",
+                "responses": {
+                    "200": {
+                        "description": "Success: The load count was successfully retrieved."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while retrieving the load count."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/UpdateLoadCount": {
+            "put": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Updates the load count value in the database.",
+                "parameters": [
+                    {
+                        "name": "newLoadCount",
+                        "in": "query",
+                        "description": "The new load count to be set.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The load count was successfully updated."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided load count is invalid."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while updating the load count."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/UpdateLoadCountMultiRegion": {
+            "put": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Updates the load count value in the database for a specific cluster.",
+                "parameters": [
+                    {
+                        "name": "ClusterName",
+                        "in": "query",
+                        "description": "The name of the cluster to update.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "newLoadCount",
+                        "in": "query",
+                        "description": "The new load count to be set.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "newNodeCount",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The load count was successfully updated."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided load count is invalid."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while updating the load count."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/GetLoadCountMultiRegion": {
+            "get": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Retrieves the load count for a specified cluster from the database.",
+                "parameters": [
+                    {
+                        "name": "ClusterName",
+                        "in": "query",
+                        "description": "The name of the cluster for which the load count is to be retrieved.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The load count was successfully retrieved for the specified cluster."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided cluster name is invalid."
+                    },
+                    "404": {
+                        "description": "Not Found: The specified cluster name does not exist in the database."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while retrieving the load count."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/GETInactivityStateMultiRegion": {
+            "get": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Retrieves the inactivity state for a specific Kubernetes cluster in multiple clusters.",
+                "parameters": [
+                    {
+                        "name": "ClusterName",
+                        "in": "query",
+                        "description": "The name of the Kubernetes cluster for which the inactivity state is to be fetched.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The inactivity state data was successfully retrieved."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided ClusterName is invalid or missing."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while fetching the inactivity state from the database."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/UpdateInactivityStateMultiRegion": {
+            "put": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Updates the inactivity state of a specified Kubernetes cluster in multiple clusters.",
+                "parameters": [
+                    {
+                        "name": "ClusterName",
+                        "in": "query",
+                        "description": "The name of the Kubernetes cluster whose inactivity state is to be updated.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "inactivityState",
+                        "in": "query",
+                        "description": "The new inactivity state to set for the specified cluster. If null or empty, it will be set to null in the database.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The inactivity state was successfully updated."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided ClusterName or inactivity state is invalid."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while updating the inactivity state in the database."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/UpdateInactivityStateAndHoursMultiRegion": {
+            "put": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Updates the inactivity state and inactivity time (in hours) for a specified Kubernetes cluster in multiple clusters.",
+                "parameters": [
+                    {
+                        "name": "ClusterName",
+                        "in": "query",
+                        "description": "The name of the Kubernetes cluster for which the inactivity state and hours are being updated.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "The model containing the new inactivity state and inactivity time (in hours) to be set for the specified cluster.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KuberenetesInactivity"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KuberenetesInactivity"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KuberenetesInactivity"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success: The inactivity state and inactivity time were successfully updated."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided ClusterName or model is invalid."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while updating the inactivity state and hours in the database."
+                    }
+                }
+            }
+        },
+        "/Kubernetes/UpdateClusterStartTimeMultiRegion": {
+            "put": {
+                "tags": [
+                    "Kubernetes"
+                ],
+                "summary": "Updates the start time for a specified Kubernetes cluster in multiple clusters.",
+                "parameters": [
+                    {
+                        "name": "ClusterName",
+                        "in": "query",
+                        "description": "The name of the Kubernetes cluster whose start time is to be updated.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "newClusterStartTime",
+                        "in": "query",
+                        "description": "The new start time to set for the specified cluster.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The cluster's start time was successfully updated."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided ClusterName or newClusterStartTime is invalid or missing."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while updating the cluster's start time in the database."
+                    }
+                }
+            }
+        },
+        "/api/KubernetesExploration": {
+            "post": {
+                "tags": [
+                    "KubernetesExploration"
+                ],
+                "summary": "API endpoint to add a report entry.",
+                "requestBody": {
+                    "description": "The KubernetesExploration model containing report entry details.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KubernetesExploration"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KubernetesExploration"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/KubernetesExploration"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "CapacityReportConfig": {
+                "required": [
+                    "datasetId",
+                    "datasetName",
+                    "pageId",
+                    "reportId",
+                    "workspaceId",
+                    "workspaceName"
+                ],
+                "type": "object",
+                "properties": {
+                    "workspaceId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "workspaceName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "datasetId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "datasetName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "reportId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "pageId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "CollectionModel": {
+                "required": [
+                    "collaboratorAccess",
+                    "collaboratorEmail",
+                    "collectionName",
+                    "createdBy",
+                    "createdDate",
+                    "isRLS",
+                    "pageId",
+                    "pageName",
+                    "reportId",
+                    "reportName",
+                    "userActionsFlag",
+                    "workspaceId",
+                    "workspaceName"
+                ],
+                "type": "object",
+                "properties": {
+                    "collectionId": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "collectionName": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "isFavourite": {
+                        "type": "boolean"
+                    },
+                    "rowLevelCollectionId": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "workspaceId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "workspaceName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "reportId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "reportName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "pageId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "createdBy": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "lastUpdatedBy": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "pageName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "createdDate": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "lastUpdatedDate": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "userActionsFlag": {
+                        "type": "array",
+                        "items": {
+                            "type": "boolean"
+                        }
+                    },
+                    "userActions": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "isRLS": {
+                        "type": "array",
+                        "items": {
+                            "type": "boolean"
+                        }
+                    },
+                    "datasetId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "roleName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "roleValue": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "collaboratorEmail": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "collaboratorAccess": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "InsightsReportConfig": {
+                "required": [
+                    "datasetId",
+                    "datasetName",
+                    "pageId",
+                    "reportId",
+                    "workspaceId",
+                    "workspaceName"
+                ],
+                "type": "object",
+                "properties": {
+                    "workspaceId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "workspaceName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "datasetId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "datasetName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "reportId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "pageId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "KuberenetesInactivity": {
+                "required": [
+                    "inactivitynewValue",
+                    "inactivityState"
+                ],
+                "type": "object",
+                "properties": {
+                    "inactivitynewValue": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "inactivityState": {
+                        "minLength": 1,
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "KubernetesExploration": {
+                "required": [
+                    "groupId",
+                    "id",
+                    "reportId",
+                    "token",
+                    "userLoad"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "reportId": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "groupId": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "token": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "userLoad": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "TestRunExecutionModel": {
+                "required": [
+                    "executedBy",
+                    "isExecuted",
+                    "rowLevelCollectionId",
+                    "testRunId"
+                ],
+                "type": "object",
+                "properties": {
+                    "testRunId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "rowLevelCollectionId": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    "executedBy": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "isExecuted": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "executedAt": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "loadTestingCount": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int32"
+                        },
+                        "nullable": true
+                    },
+                    "status": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "statusMessage": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "executionType": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "TestRunModel": {
+                "required": [
+                    "collectionId",
+                    "createdBy",
+                    "createdDate",
+                    "description",
+                    "loadTestingCount",
+                    "rowLevelCollectionId",
+                    "testRunName",
+                    "testRunType",
+                    "totalTestingLoadCount"
+                ],
+                "type": "object",
+                "properties": {
+                    "collectionId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "description": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "rowLevelCollectionId": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    "testRunName": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "testRunType": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "loadTestingCount": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    "status": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "createdBy": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "updatedBy": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "createdDate": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "lastUpdatedDate": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "lastExecutedDate": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "enableVisuals": {
+                        "type": "array",
+                        "items": {
+                            "type": "boolean"
+                        },
+                        "nullable": true
+                    },
+                    "totalTestingLoadCount": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "UpdateAccessTokenModel": {
+                "required": [
+                    "accessToken",
+                    "userEmail"
+                ],
+                "type": "object",
+                "properties": {
+                    "accessToken": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "userEmail": {
+                        "minLength": 1,
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "UserInfoModel": {
+                "required": [
+                    "userEmail",
+                    "userName"
+                ],
+                "type": "object",
+                "properties": {
+                    "userName": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "userEmail": {
+                        "minLength": 1,
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "securitySchemes": {
+            "Bearer": {
+                "type": "apiKey",
+                "description": "Enter 'Bearer' followed by your JWT token",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "security": [
+        {
+            "Bearer": []
+        }
+    ]
+}

@@ -1,28 +1,4 @@
----
-description: >-
-  This guide will help you understand the features and functionalities of LoadFAST
-  and provide step-by-step instructions for efficient use.
----
-
-# ### Create Test Run
-**Overview:**
-Creating a test run in LoadFAST allows you to simulate user activity and measure the performance of your reports by specifying the load count. This helps in identifying bottlenecks and optimizing report load times.
-
-**Steps:**
-
-1. **Enter Collection's Detail Page**
-   - Click on created collection to enter detail page.
-   
-   <figure><img src="attachment/coll-click.png" alt="Enter Collection detailed Page"><figcaption></figcaption></figure>
-
-2. **Click on + New Test:**
-   - On your collection's detail page, click the **+ New Test** button to start creating a new test run.
-   
-   <figure><img src="attachment/coll-create-test.png" alt="Create Test Run"><figcaption></figcaption></figure>
-
-3. **Select Load Test:** Enter the desired user count.
- 
-   <figure><img src="attachment/test-type.png" alt="Enter Test Details"><figcaption></figcaption></figure>AST
+# How to Use LoadFAST
 
 ## 1. Introduction
 
@@ -56,8 +32,8 @@ LoadFAST is a load testing tool for Power BI reports that uses virtual users to 
 
 **Steps:**
 
-1. Open the LoadFAST web URL in your browser.
-2. Choose your account and complete authentication to access the tool.
+ - Open the LoadFAST web URL in your browser.
+ -Choose your account and complete authentication to access the tool.
 
    <figure><img src="attachment/auth.png" alt="Login Page"><figcaption></figcaption></figure>
 
@@ -119,9 +95,8 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
      - **Viewer:** Has permission to view the collection and see test runs inside the collection.
    - After entering the collection details, click **Continue** to proceed to the next step.
   
-   {% hint style="info" %}
-   **Note:** The **Continue** button will remain disabled until a valid collaborator email address is provided.
-   {% endhint %}
+      **Note:** The **Continue** button will remain disabled until a valid collaborator email address is provided.
+   
 
    <figure><img src="attachment/coll-enterdetail.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
 
@@ -130,9 +105,8 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
    - Browse through the available workspaces and reports.
    - Use filters or the search bar to find specific reports.
    - Select the reports and pages you want to include by **checking the boxes** next to them.
-   - RLS report is indicated with an icon: 
+   - RLS report is indicated with an icon.
    
-   <figure><img src="attachment/rls-icon.png" alt="RLS icon"><figcaption></figcaption></figure>
    <figure><img src="attachment/coll-select-rep.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
 
 4. **Configure RLS (If RLS report is selected)**
@@ -142,17 +116,15 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
    <figure><img src="attachment/coll-click-config-rls.png" alt="Configure RLS"><figcaption></figcaption></figure>
    
    - Select **Role Name** from Dropdown box
-   - Enter the **Email** address:
-      - **Scenario 1:** If you have Admin or Member access to the Power BI workspace, you can enter the email address for any role value.
-      
-      <figure><img src="attachment/coll-conf-RLS-admin.png" alt="Enter Collection Details - Admin"><figcaption></figcaption></figure>
-      
-      - **Scenario 2:** If you do not have workspace permissions, your own email address will be selected by default.
+   - Enter the **Email** address.
+    
+     **Note:** *If you are an Admin, you can test on behalf of any user else your own email will be selected by default.*
+
       
       <figure><img src="attachment/coll-conf-RLS.png" alt="Enter Collection Details - Default"><figcaption></figcaption></figure>
 
 5. **Add User Action:**
-   While selecting a report, users can add simple actions like filtering or slicing. These actions are used to calculate the Page Load Time (PLT) based on the selected interactions, providing more accurate performance metrics.
+  While selecting a report, users can add simple actions like filtering or slicing. These actions are used to calculate the Page Load Time (PLT) based on the selected interactions, providing more accurate performance metrics.
 
    **Steps:**
    - Click on the dropdown arrow next to the report name, then you will see **+** in user action for each page.
@@ -167,7 +139,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
       
       <figure><img src="attachment/coll-user-action-rls.png" alt="User Action RLS"><figcaption></figcaption></figure>
 
-6. **Review and Finalize:**
+1. **Review and Finalize:**
    - Ensure all desired reports/pages are selected.
    - Click **Create Collection** to create your collection.
    
@@ -178,9 +150,9 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
 - **Edit Collection:**
    - Collections can be edited, user can change collection name, add or remove reports/pages or update collaborators.
    
-   {% hint style="info" %}
-   **Note:** Report can be updated only when no Test Run is Created/Triggered inside the collection.
-   {% endhint %}
+
+     **Note:** Report can be updated only when no Test Run is Created/Triggered inside the collection.
+   
    
    <figure><img src="attachment/edit-coll.png" alt="Edit Collection"><figcaption></figcaption></figure>
 
@@ -199,16 +171,19 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
 
 1. **Enter Collection’s Detail Page**
     - Click on created collection to enter detail page.
-![Enter Collection detailed Page](attachment\coll-click.png)
+    
+    <figure><img src="attachment/coll-click.png" alt="Enter Collection detailed Page"><figcaption></figcaption></figure>
 
 1. **Click on + New Test:**
-   - On your collection’s detail page, click the **+ New Test** button to start creating a new test run.
-![Create Test Run](attachment\coll-create-test.png)
+    - On your collection’s detail page, click the **+ New Test** button to start creating a new test run.
+  
+    <figure><img src="attachment/coll-create-test.png" alt="Create Test Run"><figcaption></figcaption></figure>
 
-3. **Select Load Test:** Enter the desired user count. 
-![Enter Test Details](attachment\test-type.png)
+1. **Select Load Test:** Enter the desired user count. 
 
-4. **Enter Test Details:**
+   <figure><img src="attachment/test-type.png" alt="Enter Test Details"><figcaption></figcaption></figure>
+
+2. **Enter Test Details:**
    - Provide a name for your test in the **Test Name** field.
    - Configure the number of users (load count) to simulate for the test run.
    - Use options "Apply to All" or "Percentage Split" to distribute users across assets.
@@ -236,14 +211,14 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
    
    <figure><img src="attachment/test-enter-detail.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
-5. **Review and Trigger Test Run:**
+3. **Review and Trigger Test Run:**
    - Your test run will appear within the collection.
    - Click the **Trigger** button to initiate the test run.
       - It will calculate the Average Page Load Time (Avg PLT) and the 90th percentile, updating the Run Status based on the specified Load Count.
       
       <figure><img src="attachment/test-created.png" alt="Created Test"><figcaption></figcaption></figure>
 
-6. **Monitor Test Progress and Results:**
+4. **Monitor Test Progress and Results:**
    - Metrics such as average PLT, 90th Percentile, and run status will be displayed for each test run:
      - **Run Status:** Indicates the current state of the test run (e.g., Not Started, In Progress, Partially Passed, Completed, Failed).
        - **Partially Passed:** Indicates that some pages in the report passed the test, while others failed.
@@ -266,10 +241,17 @@ The All Tests page allows users to view all test runs created across different c
 
 **Steps:**
 
-1. Click on the **All Tests** icon from the sidebar. ![Select All test](attachment/all-test.png)
+1. Click on the **All Tests** icon from the sidebar.
 
-2. **Select Collection:** By default, all tests from all collections are shown.![Select Collection](attachment/all-test-select.png)
-  - Select a collection from the dropdown to view test runs specific to that collection.![Select Collection](attachment/all-test-selected.png)
+   <figure><img src="attachment/all-test.png" alt="Select All test"><figcaption></figcaption></figure>
+
+2. **Select Collection:** By default, all tests from all collections are shown.
+   
+   <figure><img src="attachment/all-test-select.png" alt="Select Collection"><figcaption></figcaption></figure>
+   
+   - Select a collection from the dropdown to view test runs specific to that collection.
+   
+   <figure><img src="attachment/all-test-selected.png" alt="Collection Selected"><figcaption></figcaption></figure>
 
 
 ### Admin Settings
@@ -278,22 +260,42 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
 
 **Steps:**
 
-1. Click on the **Admin Settings** icon from the sidebar. ![Select Admin Settings](attachment/admin-enter.png)
+1. Click on the **Admin Settings** icon from the sidebar.
+
+   <figure><img src="attachment/admin-enter.png" alt="Select Admin Settings"><figcaption></figcaption></figure>
 
 2. **Cluster Management:**
-   - Select a **cluster** from the dropdown.![Select Cluster](attachment/admin-select-cluster.png)
+   - Select a **cluster** from the dropdown.
+   
+     <figure><img src="attachment/admin-select-cluster.png" alt="Select Cluster"><figcaption></figcaption></figure>
+
    - View the cluster’s current status.
-     - Below it will show the status of the cluster On/Off. ![Cluster Status](attachment/admin-cluster-status.png)
-   - Choose a management type (Auto, Manual). ![Select Type](attachment/admin-cluster.png)
+     - Below it will show the status of the cluster On/Off.
+     
+       <figure><img src="attachment/admin-cluster-status.png" alt="Cluster Status"><figcaption></figcaption></figure>
+
+   - Choose a management type (Auto, Manual).
+   
+     <figure><img src="attachment/admin-cluster.png" alt="Select Type"><figcaption></figcaption></figure>
+     
      - **Auto:** The cluster will automatically shut down after the **Specified Hours** of inactivity.
         - To apply this setting, toggle the button **ON** and specify the number of **Hours** after which the cluster should shut down.
-      **Note:** *When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.*
-![Auto Cluster](attachment/admin-autoclus.png)
+        
+        {% hint style="info" %}
+        **Note:** When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.
+        {% endhint %}
+        
+        <figure><img src="attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
+     
      - **Manual:** To turn the cluster ON/OFF.
-        - Click the toggle button to turn the cluster ON/OFF.![Manually Off](attachment/admin-manual-off.png)
+        - Click the toggle button to turn the cluster ON/OFF.
+        
+        <figure><img src="attachment/admin-manual-off.png" alt="Manually Off"><figcaption></figcaption></figure>
 
 
-3. **Insights Report:** Click on **Insights Report** tab![Insight Enter](attachment/admin-insight-enter.png)
+3. **Insights Report:** Click on **Insights Report** tab
+
+   <figure><img src="attachment/admin-insight-enter.png" alt="Insight Enter"><figcaption></figcaption></figure>
    - Configure the Insights Report by entering the following fields:
      - **Workspace ID:** Unique identifier for the Power BI workspace.
      - **Workspace Name (Optional):** Name for easier identification.
@@ -301,25 +303,35 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
      - **Dataset ID:** Unique identifier for the dataset powering the report.
      - **Dataset Name (Optional):** For reference or clarity.
      
-      **Note:** 
-      - The Service Principal (SPN) used must have Admin or Member permissions on the workspace containing the Insight report.
-      - The report and its dataset must also be in the same workspace.
+     {% hint style="info" %}
+     **Note:** 
+     - The Service Principal (SPN) used must have Admin or Member permissions on the workspace containing the Insight report.
+     - The report and its dataset must also be in the same workspace.
+     {% endhint %}
+     
+     <figure><img src="attachment/admin-insight.png" alt="Insight Report"><figcaption></figcaption></figure>
 
-     ![Insight Report](attachment/admin-insight.png)
+4. **Capacity Report:** Click on the **Capacity Report** tab.
 
-4. **Capacity Report:** Click on the **Capacity Report** tab. ![Select Capacity](attachment/admin-capapcity-enter.png)
+   <figure><img src="attachment/admin-capapcity-enter.png" alt="Select Capacity"><figcaption></figcaption></figure>
+   
    - Set up the Capacity Report by providing:
      - **Workspace ID** and **Workspace Name (Optional)**
      - **Report ID** and **Dataset ID**
      - **Dataset Name (Optional):** e.g., Microsoft Fabric Capacity Metrics
-   ![Capacity Report](attachment/admin-cap-insi.png)
+   
+   <figure><img src="attachment/admin-cap-insi.png" alt="Capacity Report"><figcaption></figcaption></figure>
 
-5. **Load Count:** Click on the **Load Count** tab. ![Load Count](attachment/admin-load-enter.png)
+5. **Load Count:** Click on the **Load Count** tab.
+
+   <figure><img src="attachment/admin-load-enter.png" alt="Load Count"><figcaption></figcaption></figure>
+   
    - Update the cluster's load count by:
      - Selecting the cluster from the dropdown.
      - Viewing the maximum allowed limit.
      - Entering a new load count in Current Cluster Load Count (do not exceed the maximum limit).
-   ![Load Count](attachment/admin-usercount.png)
+   
+   <figure><img src="attachment/admin-usercount.png" alt="Load Count Settings"><figcaption></figcaption></figure>
 6. Click **Apply** button to execute the selected actions.
 
 
@@ -331,11 +343,13 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
 The Insights Report provides detailed performance metrics for load times, down to the visual level.
 
 **Steps:**
-1. Click on the **Insight Report** icon in the sidebar.  
-   ![Insight Click](attachment\insight-enter.png)
+1. Click on the **Insight Report** icon in the sidebar.
+   
+   <figure><img src="attachment/insight-enter.png" alt="Insight Click"><figcaption></figcaption></figure>
 
-2. Once the report is loaded, select the desired collection from the **Collection Name** slicer.  
-   ![Insight Click](attachment\insight-selectcollt.png)  
+2. Once the report is loaded, select the desired collection from the **Collection Name** slicer.
+   
+   <figure><img src="attachment/insight-selectcollt.png" alt="Select Collection"><figcaption></figcaption></figure>
    - Users can also select additional filters such as **Test Run/Workspace Name/Report Name/Page Name** to refine the output.
 
 3. View the metrics for the selected slicers:
@@ -345,16 +359,20 @@ The Insights Report provides detailed performance metrics for load times, down t
    - **Runs:** Provides the total number of test runs and their status (e.g., Partially Passed).
    - **AVG PLT (Average Page Load Time):** Displays the average page load time across the report.
    - **Most Expensive Visual:** Highlights the visual element with the highest load time.
-   - **Test Name and Test Run:** Displays the test name and run associated with the most expensive visual.  
-   ![Metric Summary](attachment\insight-metric.png)
+   - **Test Name and Test Run:** Displays the test name and run associated with the most expensive visual.
+   
+   <figure><img src="attachment/insight-metric.png" alt="Metric Summary"><figcaption></figcaption></figure>
 
 4. Below the metrics, view the **Bar Chart** and **Line Chart**:
    - **AVG PLT Across Tests (Bar Chart):** Displays a bar chart showing the average page load time for each test run.  
      - Each bar represents the average page load time for a specific test run, 1st Bar indicate specific run has higher load time and need optimization.
-     ![Graph Summary](attachment\insight-graph-bar.png)
-   - **AVG Load Time and Percentile (Line Chart):** This chart shows how average load times and percentiles change across test runs.  
+     
+     <figure><img src="attachment/insight-graph-bar.png" alt="Bar Chart Summary"><figcaption></figcaption></figure>
+   
+   - **AVG Load Time and Percentile (Line Chart):** This chart shows how average load times and percentiles change across test runs.
      - The chart shows how average load time change across test runs, the shaded area highlights the trend and the points show the average load time for each run.
-     ![Graph Summary](attachment\insight-graph.png)
+     
+     <figure><img src="attachment/insight-graph.png" alt="Line Chart Summary"><figcaption></figcaption></figure>
 
 5. Scroll down to the **Page & Visual Details Table** to see detailed information about the collection:
    - **Test Run:** Lists the test runs conducted.
@@ -365,26 +383,36 @@ The Insights Report provides detailed performance metrics for load times, down t
    - **Status:** Displays the status of the test (e.g., Passed, Failed).
    - **User Count:** Indicates the number of users simulated during the test (load count).
    - **Page/Visual PLT:** Shows the page or visual load time.
-   - **UA:** Displays if any user action is applied.  
-   ![Insight Report](attachment\insight-table.png)
+   - **UA:** Displays if any user action is applied.
+   
+   <figure><img src="attachment/insight-table.png" alt="Insight Report Table"><figcaption></figcaption></figure>
 
 6. To drill through for a detailed view:
    - Right-click on **Test Run/Report Name/Page Name/Visual Name**.
-   - Select **Drill Through** from the dropdown, then choose **User Action** or **Visual** to view detailed metrics instead of average.  
-     ![Drill-Through](attachment\Insight-drillthrough.png)
+   - Select **Drill Through** from the dropdown, then choose **User Action** or **Visual** to view detailed metrics instead of average.
+   
+     <figure><img src="attachment/Insight-drillthrough.png" alt="Drill-Through"><figcaption></figcaption></figure>
 
 7. Drill-through options:
-   - **User Action:** Analyze specific user interactions applied during the test run.  
-     ![User Action](attachment/insight-useraction1.png)  
-     - After clicking, you will see a detailed view of the selected interaction.  
-       ![User Action Result](attachment/insight-useraction2.png)
-   - **Visual:** Focus on individual visuals within a report for detailed performance metrics.  
-     ![Visual](attachment/insight-9.png)  
-     - After clicking, you will see a detailed view of the selected visual.  
-       ![Visual](attachment/insight-visual-res.png)
+   - **User Action:** Analyze specific user interactions applied during the test run.
+   
+     <figure><img src="attachment/insight-useraction1.png" alt="User Action"><figcaption></figcaption></figure>
+     
+     - After clicking, you will see a detailed view of the selected interaction.
+     
+       <figure><img src="attachment/insight-useraction2.png" alt="User Action Result"><figcaption></figcaption></figure>
+   
+   - **Visual:** Focus on individual visuals within a report for detailed performance metrics.
+   
+     <figure><img src="attachment/insight-9.png" alt="Visual"><figcaption></figcaption></figure>
+     
+     - After clicking, you will see a detailed view of the selected visual.
+     
+       <figure><img src="attachment/insight-visual-res.png" alt="Visual Detail"><figcaption></figcaption></figure>
 
-8. Click the **Back** button to return to the previous view.  
-   ![Back button](attachment/insight-back.png)
+8. Click the **Back** button to return to the previous view.
+   
+   <figure><img src="attachment/insight-back.png" alt="Back button"><figcaption></figcaption></figure>
 
 
 
@@ -394,8 +422,14 @@ The Insights Report provides detailed performance metrics for load times, down t
 The **Capacity Report** provides a comprehensive overview of compute and storage usage across your Microsoft Fabric environment. It includes detailed visualizations, usage metrics, and interactive charts that help monitor capacity performance, detect overages, prevent throttling, and manage storage consumption efficiently.
 
 **Steps:**
-1. Click the **Capacity Report** icon in the left sidebar.![Select Capacity Report ](attachment/capacity-enter.png)
-2. Select the **Capacity Name** from dropdown (e.g., `maqsoftwarefabric`).![Select Capacity Name ](attachment/capacity-select.png)
+1. Click the **Capacity Report** icon in the left sidebar.
+
+   <figure><img src="attachment/capacity-enter.png" alt="Select Capacity Report"><figcaption></figcaption></figure>
+
+2. Select the **Capacity Name** from dropdown (e.g., `maqsoftwarefabric`).
+
+   <figure><img src="attachment/capacity-select.png" alt="Select Capacity Name"><figcaption></figcaption></figure>
+
 3. Use the tabs to explore different categories of metrics.
    
 

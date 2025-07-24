@@ -1,0 +1,1155 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Your API",
+        "version": "v1"
+    },
+    "paths": {
+        "/Notifications/GetLastClusterNotification": {
+            "get": {
+                "tags": [
+                    "Notifications"
+                ],
+                "summary": "Retrieves the latest cluster notification from the database.",
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the last cluster notification from the database."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while fetching the last cluster notification."
+                    }
+                }
+            }
+        },
+        "/Notifications/AddNotification": {
+            "post": {
+                "tags": [
+                    "Notifications"
+                ],
+                "summary": "Adds a new notification to the database with the provided message, state, timestamp, and role.",
+                "parameters": [
+                    {
+                        "name": "message",
+                        "in": "query",
+                        "description": "The message content of the notification.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "state",
+                        "in": "query",
+                        "description": "The current state or status associated with the notification.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "dateTime",
+                        "in": "query",
+                        "description": "The timestamp indicating when the notification was created.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "role",
+                        "in": "query",
+                        "description": "The role associated with the notification (e.g., user role, system role, etc.).",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The notification was successfully added to the database."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while adding the notification."
+                    }
+                }
+            }
+        },
+        "/Notifications/GetNotifications": {
+            "get": {
+                "tags": [
+                    "Notifications"
+                ],
+                "summary": "Retrieves a list of notifications from the database based on the provided role.",
+                "parameters": [
+                    {
+                        "name": "role",
+                        "in": "query",
+                        "description": "The role used to filter the notifications (e.g., user role, admin role, etc.). If not provided, all notifications are fetched.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: A list of notifications is returned based on the role provided."
+                    },
+                    "400": {
+                        "description": "Bad Request: The request contains invalid or missing parameters."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while retrieving notifications from the database."
+                    }
+                }
+            }
+        },
+        "/Notifications/DeleteNotifications": {
+            "delete": {
+                "tags": [
+                    "Notifications"
+                ],
+                "summary": "Deletes notifications from the database.",
+                "responses": {
+                    "200": {
+                        "description": "Success: Notifications have been successfully deleted."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while deleting notifications from the database."
+                    }
+                }
+            }
+        },
+        "/RLS/GetRLSRoles": {
+            "get": {
+                "tags": [
+                    "RLS"
+                ],
+                "summary": "Retrieves the Row-Level Security (RLS) roles for a specified Power BI workspace and dataset.",
+                "parameters": [
+                    {
+                        "name": "workspaceName",
+                        "in": "query",
+                        "description": "The name of the Power BI workspace.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "datasetName",
+                        "in": "query",
+                        "description": "The name of the dataset within the specified workspace.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the list of RLS roles for the given workspace and dataset."
+                    },
+                    "400": {
+                        "description": "Bad Request: The request failed due to invalid or missing parameters."
+                    },
+                    "404": {
+                        "description": "Not Found: The specified workspace or dataset could not be found."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while retrieving RLS roles from Power BI."
+                    }
+                }
+            }
+        },
+        "/TestRun/CreateTestRun": {
+            "post": {
+                "tags": [
+                    "TestRun"
+                ],
+                "summary": "Creates a new test run based on the provided test run model and inserts data into the database.",
+                "requestBody": {
+                    "description": "The model containing the test run details, including collection IDs, test run name, status, and other attributes.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TestRunModel"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TestRunModel"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TestRunModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success: Test run created successfully with a new Test Run Id."
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid input or missing required parameters in the test run model."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred during the creation of the test run or insertion into the database."
+                    }
+                }
+            }
+        },
+        "/TestRun/DeleteTestRun": {
+            "delete": {
+                "tags": [
+                    "TestRun"
+                ],
+                "summary": "Deletes an existing test run based on the provided collection ID and test run name.",
+                "parameters": [
+                    {
+                        "name": "collectionId",
+                        "in": "query",
+                        "description": "The ID of the collection to which the test run belongs.",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "testRunName",
+                        "in": "query",
+                        "description": "The name of the test run to be deleted.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Test run deleted successfully, with the number of affected rows."
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid input parameters or missing required fields (e.g., collectionId or testRunName)."
+                    },
+                    "404": {
+                        "description": "Not Found: No test run found with the provided collectionId and testRunName."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while attempting to delete the test run from the database."
+                    }
+                }
+            }
+        },
+        "/TestRun/GetTestRunsByCollectionId": {
+            "get": {
+                "tags": [
+                    "TestRun"
+                ],
+                "summary": "Retrieves a list of test runs associated with a specified collection ID.",
+                "parameters": [
+                    {
+                        "name": "collectionId",
+                        "in": "query",
+                        "description": "The ID of the collection for which the test runs are being fetched.",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns a list of test runs associated with the provided collection ID."
+                    },
+                    "400": {
+                        "description": "Bad Request: The request failed due to invalid parameters or a processing error."
+                    },
+                    "404": {
+                        "description": "Not Found: No test runs found for the given collection ID."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while retrieving test runs from the database."
+                    }
+                }
+            }
+        },
+        "/TestRun/GetTestRun": {
+            "get": {
+                "tags": [
+                    "TestRun"
+                ],
+                "summary": "Retrieves a specific test run based on the provided collection ID and test run name.",
+                "parameters": [
+                    {
+                        "name": "collectionId",
+                        "in": "query",
+                        "description": "The ID of the collection for which the test run is being fetched.",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "testRunName",
+                        "in": "query",
+                        "description": "The name of the test run to retrieve.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns the test run details associated with the provided collection ID and test run name."
+                    },
+                    "400": {
+                        "description": "Bad Request: No test run found for the provided collection ID and test run name."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while retrieving the test run."
+                    }
+                }
+            }
+        },
+        "/TestRun/GetAllTestRuns": {
+            "get": {
+                "tags": [
+                    "TestRun"
+                ],
+                "summary": "Retrieves all test runs associated with the provided email ID.",
+                "parameters": [
+                    {
+                        "name": "emailId",
+                        "in": "query",
+                        "description": "The email ID of the user whose test runs are to be fetched.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns a list of test runs associated with the provided email ID."
+                    },
+                    "400": {
+                        "description": "Bad Request: No test runs found for the provided email ID or invalid email ID."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while retrieving the test runs."
+                    }
+                }
+            }
+        },
+        "/TestRun/GetAllTestRunsOfSpecificAccess": {
+            "get": {
+                "tags": [
+                    "TestRun"
+                ],
+                "summary": "Retrieves all test runs associated with the provided email ID and specific access level.",
+                "parameters": [
+                    {
+                        "name": "emailId",
+                        "in": "query",
+                        "description": "The email ID of the user whose test runs with specific access are to be fetched.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns a list of test runs associated with the provided email ID and specific access level."
+                    },
+                    "400": {
+                        "description": "Bad Request: No test runs found for the provided email ID or invalid email ID."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while retrieving the test runs."
+                    }
+                }
+            }
+        },
+        "/TestRun/GetAllTestRunsOfSpecificAccessLazyLoading": {
+            "get": {
+                "tags": [
+                    "TestRun"
+                ],
+                "summary": "Retrieves a paginated list of test runs associated with a specific email ID.",
+                "parameters": [
+                    {
+                        "name": "emailId",
+                        "in": "query",
+                        "description": "The email ID of the user whose test runs need to be fetched.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "pageNumber",
+                        "in": "query",
+                        "description": "The page number for pagination. Defaults to 1.",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 1
+                        }
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "description": "The number of records per page. Defaults to 10.",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 10
+                        }
+                    },
+                    {
+                        "name": "collectionId",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": -1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: Returns a paginated list of test runs along with metadata."
+                    },
+                    "400": {
+                        "description": "Bad Request: If the provided emailId is empty or invalid, or if pageNumber or pageSize is less than 1."
+                    },
+                    "404": {
+                        "description": "Not Found: No test runs found for the provided email ID."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while retrieving test runs."
+                    }
+                }
+            }
+        },
+        "/TestRunExecutionDetails/CreateTestRunExecution": {
+            "post": {
+                "tags": [
+                    "TestRunExecutionDetails"
+                ],
+                "summary": "Creates a new test run execution entry in the database based on the provided details.",
+                "requestBody": {
+                    "description": "The model containing details about the test run execution.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TestRunExecutionModel"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TestRunExecutionModel"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TestRunExecutionModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success: The test run execution entries were successfully inserted into the database."
+                    },
+                    "400": {
+                        "description": "Bad Request: An error occurred during the process, such as invalid data or missing fields."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while generating the TestRunExecution Id or performing the bulk insert operation."
+                    }
+                }
+            }
+        },
+        "/TestRunExecutionDetails/CreateTestRunExecutionNonBulk": {
+            "post": {
+                "tags": [
+                    "TestRunExecutionDetails"
+                ],
+                "summary": "Creates multiple test run execution records in the database by inserting each record individually.",
+                "requestBody": {
+                    "description": "The model containing details about the test run executions.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TestRunExecutionModel"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TestRunExecutionModel"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TestRunExecutionModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success: The test run execution records were successfully created."
+                    },
+                    "400": {
+                        "description": "Bad Request: An error occurred while processing the request, such as invalid data or missing fields."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while generating the TestRunExecution Id or performing the insert operations."
+                    }
+                }
+            }
+        },
+        "/TestRunExecutionDetails/GetTestRunExecutionDetails": {
+            "get": {
+                "tags": [
+                    "TestRunExecutionDetails"
+                ],
+                "summary": "Retrieves the details of all test run executions from the database.",
+                "responses": {
+                    "200": {
+                        "description": "Success: The test run execution details were successfully fetched."
+                    },
+                    "400": {
+                        "description": "Bad Request: An error occurred while fetching the test run execution details."
+                    }
+                }
+            }
+        },
+        "/TestRunExecutionDetails/GetTestRunExecutionDetailsByCollectionId": {
+            "get": {
+                "tags": [
+                    "TestRunExecutionDetails"
+                ],
+                "summary": "Retrieves the details of test run executions for a specific collection from the database.",
+                "parameters": [
+                    {
+                        "name": "collectionId",
+                        "in": "query",
+                        "description": "The ID of the collection for which test run execution details are to be fetched.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The test run execution details for the specified collection were successfully fetched."
+                    },
+                    "400": {
+                        "description": "Bad Request: An error occurred while fetching the test run execution details."
+                    }
+                }
+            }
+        },
+        "/UserInfo/UserId": {
+            "get": {
+                "tags": [
+                    "UserInfo"
+                ],
+                "summary": "Retrieves the user ID for a specified username.",
+                "parameters": [
+                    {
+                        "name": "userName",
+                        "in": "query",
+                        "description": "The username for which the user ID is to be fetched.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success: The user ID for the specified username was successfully fetched."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided username is invalid or an error occurred while fetching the user ID."
+                    }
+                }
+            }
+        },
+        "/UserInfo/RegisterNewUser": {
+            "post": {
+                "tags": [
+                    "UserInfo"
+                ],
+                "summary": "Registers a new user.",
+                "requestBody": {
+                    "description": "The user details including UserName and UserEmail.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserInfoModel"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserInfoModel"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserInfoModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success: The new user was successfully registered."
+                    },
+                    "400": {
+                        "description": "Bad Request: Invalid data provided (e.g., missing UserName or UserEmail)."
+                    },
+                    "409": {
+                        "description": "Conflict: A user with the provided email already exists."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while attempting to register the user."
+                    }
+                }
+            }
+        },
+        "/UserInfo/UpdateAccessToken": {
+            "patch": {
+                "tags": [
+                    "UserInfo"
+                ],
+                "summary": "Updates the access token for a user based on their email address.",
+                "requestBody": {
+                    "description": "The model containing the new AccessToken and the UserEmail for the user.",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateAccessTokenModel"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateAccessTokenModel"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateAccessTokenModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success: The access token was successfully updated."
+                    },
+                    "400": {
+                        "description": "Bad Request: The provided AccessToken or UserEmail is invalid or missing."
+                    },
+                    "409": {
+                        "description": "Conflict: The user with the provided email was not found."
+                    },
+                    "500": {
+                        "description": "Internal Server Error: An error occurred while updating the access token."
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "CapacityReportConfig": {
+                "required": [
+                    "datasetId",
+                    "datasetName",
+                    "pageId",
+                    "reportId",
+                    "workspaceId",
+                    "workspaceName"
+                ],
+                "type": "object",
+                "properties": {
+                    "workspaceId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "workspaceName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "datasetId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "datasetName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "reportId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "pageId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "CollectionModel": {
+                "required": [
+                    "collaboratorAccess",
+                    "collaboratorEmail",
+                    "collectionName",
+                    "createdBy",
+                    "createdDate",
+                    "isRLS",
+                    "pageId",
+                    "pageName",
+                    "reportId",
+                    "reportName",
+                    "userActionsFlag",
+                    "workspaceId",
+                    "workspaceName"
+                ],
+                "type": "object",
+                "properties": {
+                    "collectionId": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "collectionName": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "isFavourite": {
+                        "type": "boolean"
+                    },
+                    "rowLevelCollectionId": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "workspaceId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "workspaceName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "reportId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "reportName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "pageId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "createdBy": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "lastUpdatedBy": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "pageName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "createdDate": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "lastUpdatedDate": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "userActionsFlag": {
+                        "type": "array",
+                        "items": {
+                            "type": "boolean"
+                        }
+                    },
+                    "userActions": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "isRLS": {
+                        "type": "array",
+                        "items": {
+                            "type": "boolean"
+                        }
+                    },
+                    "datasetId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "roleName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "roleValue": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "collaboratorEmail": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "collaboratorAccess": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "InsightsReportConfig": {
+                "required": [
+                    "datasetId",
+                    "datasetName",
+                    "pageId",
+                    "reportId",
+                    "workspaceId",
+                    "workspaceName"
+                ],
+                "type": "object",
+                "properties": {
+                    "workspaceId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "workspaceName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "datasetId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "datasetName": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "reportId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "pageId": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalProperties": false
+            },
+            "KuberenetesInactivity": {
+                "required": [
+                    "inactivitynewValue",
+                    "inactivityState"
+                ],
+                "type": "object",
+                "properties": {
+                    "inactivitynewValue": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "inactivityState": {
+                        "minLength": 1,
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "KubernetesExploration": {
+                "required": [
+                    "groupId",
+                    "id",
+                    "reportId",
+                    "token",
+                    "userLoad"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "reportId": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "groupId": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "token": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "userLoad": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "TestRunExecutionModel": {
+                "required": [
+                    "executedBy",
+                    "isExecuted",
+                    "rowLevelCollectionId",
+                    "testRunId"
+                ],
+                "type": "object",
+                "properties": {
+                    "testRunId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "rowLevelCollectionId": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    "executedBy": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "isExecuted": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "executedAt": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "loadTestingCount": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int32"
+                        },
+                        "nullable": true
+                    },
+                    "status": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "statusMessage": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "executionType": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "TestRunModel": {
+                "required": [
+                    "collectionId",
+                    "createdBy",
+                    "createdDate",
+                    "description",
+                    "loadTestingCount",
+                    "rowLevelCollectionId",
+                    "testRunName",
+                    "testRunType",
+                    "totalTestingLoadCount"
+                ],
+                "type": "object",
+                "properties": {
+                    "collectionId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "description": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "rowLevelCollectionId": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    "testRunName": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "testRunType": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "loadTestingCount": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    "status": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "createdBy": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "updatedBy": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "createdDate": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "lastUpdatedDate": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "lastExecutedDate": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "enableVisuals": {
+                        "type": "array",
+                        "items": {
+                            "type": "boolean"
+                        },
+                        "nullable": true
+                    },
+                    "totalTestingLoadCount": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "UpdateAccessTokenModel": {
+                "required": [
+                    "accessToken",
+                    "userEmail"
+                ],
+                "type": "object",
+                "properties": {
+                    "accessToken": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "userEmail": {
+                        "minLength": 1,
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "UserInfoModel": {
+                "required": [
+                    "userEmail",
+                    "userName"
+                ],
+                "type": "object",
+                "properties": {
+                    "userName": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "userEmail": {
+                        "minLength": 1,
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "securitySchemes": {
+            "Bearer": {
+                "type": "apiKey",
+                "description": "Enter 'Bearer' followed by your JWT token",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "security": [
+        {
+            "Bearer": []
+        }
+    ]
+}
