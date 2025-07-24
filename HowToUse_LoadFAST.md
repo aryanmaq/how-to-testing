@@ -463,5 +463,3 @@ The **Capacity Report** provides a comprehensive overview of compute and storage
 | **Drill Through**     | Lets you view detailed metrics from summary views. |
 | **Triggered**         | The test run has started and is being executed. |
 
-
----
