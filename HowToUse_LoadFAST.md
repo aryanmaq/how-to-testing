@@ -33,7 +33,7 @@ LoadFAST is a load testing tool for Power BI reports that uses virtual users to 
 **Steps:**
 
  - Open the LoadFAST web URL in your browser.
- -Choose your account and complete authentication to access the tool.
+ - Choose your account and complete authentication to access the tool.
 
    <figure><img src="attachment/auth.png" alt="Login Page"><figcaption></figcaption></figure>
 
@@ -77,7 +77,6 @@ After clicking **Get Started**, the user will be directed to the main content ar
 ## 4. Key Features & How to Use Them
 
 ### Create Collection
-**Overview:**
 Creating a collection in LoadFAST allows users to group reports and pages for analysis and testing.
 
 **Steps:**
@@ -164,12 +163,12 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
  
 
 ### Create Test Run
-**Overview:**
 Creating a test run in LoadFAST allows you to simulate user activity and measure the performance of your reports by specifying the load count. This helps in identifying bottlenecks and optimizing report load times.
 
 **Steps:**
 
 1. **Enter Collection’s Detail Page**
+
     - Click on created collection to enter detail page.
     
     <figure><img src="attachment/coll-click.png" alt="Enter Collection detailed Page"><figcaption></figcaption></figure>
@@ -184,6 +183,7 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
    <figure><img src="attachment/test-type.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
 2. **Enter Test Details:**
+
    - Provide a name for your test in the **Test Name** field.
    - Configure the number of users (load count) to simulate for the test run.
    - Use options "Apply to All" or "Percentage Split" to distribute users across assets.
@@ -201,9 +201,8 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
          - "Retail Analysis" is assigned 80%, so it will receive 10 × 80% = 8 users.
          - The total load count will be distributed as per the specified percentages.
          
-         {% hint style="info" %}
          **Note:** Ensure the "Total Percentage Count: Effective" is 100.
-         {% endhint %}
+         
          
          <figure><img src="attachment/test-per-split.png" alt="Percentage Split option"><figcaption></figcaption></figure>
    
@@ -212,6 +211,7 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
    <figure><img src="attachment/test-enter-detail.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
 3. **Review and Trigger Test Run:**
+
    - Your test run will appear within the collection.
    - Click the **Trigger** button to initiate the test run.
       - It will calculate the Average Page Load Time (Avg PLT) and the 90th percentile, updating the Run Status based on the specified Load Count.
@@ -219,6 +219,7 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
       <figure><img src="attachment/test-created.png" alt="Created Test"><figcaption></figcaption></figure>
 
 4. **Monitor Test Progress and Results:**
+
    - Metrics such as average PLT, 90th Percentile, and run status will be displayed for each test run:
      - **Run Status:** Indicates the current state of the test run (e.g., Not Started, In Progress, Partially Passed, Completed, Failed).
        - **Partially Passed:** Indicates that some pages in the report passed the test, while others failed.
@@ -235,8 +236,6 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
 
 
 ### All Tests
-
-**Overview:**
 The All Tests page allows users to view all test runs created across different collections in a single location. Users can also search for specific tests using the dropdown box.
 
 **Steps:**
@@ -255,7 +254,6 @@ The All Tests page allows users to view all test runs created across different c
 
 
 ### Admin Settings
-**Overview:**
 The Admin Settings page allows users to manage Kubernetes clusters, Insight Report, Capacity Report, and Load Count. It includes the following functionalities:
 
 **Steps:**
@@ -281,9 +279,9 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
      - **Auto:** The cluster will automatically shut down after the **Specified Hours** of inactivity.
         - To apply this setting, toggle the button **ON** and specify the number of **Hours** after which the cluster should shut down.
         
-        {% hint style="info" %}
+        
         **Note:** When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.
-        {% endhint %}
+        
         
         <figure><img src="attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
      
@@ -304,11 +302,11 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
      - **Dataset ID:** Unique identifier for the dataset powering the report.
      - **Dataset Name (Optional):** For reference or clarity.
      
-     {% hint style="info" %}
+     
      **Note:** 
      - The Service Principal (SPN) used must have Admin or Member permissions on the workspace containing the Insight report.
      - The report and its dataset must also be in the same workspace.
-     {% endhint %}
+     
      
      <figure><img src="attachment/admin-insight.png" alt="Insight Report"><figcaption></figcaption></figure>
 
@@ -428,8 +426,6 @@ The Insights Report provides detailed performance metrics for load times, down t
 
 
 ### Capacity Report
-
-**Overview:** 
 The **Capacity Report** provides a comprehensive overview of compute and storage usage across your Microsoft Fabric environment. It includes detailed visualizations, usage metrics, and interactive charts that help monitor capacity performance, detect overages, prevent throttling, and manage storage consumption efficiently.
 
 **Steps:**
