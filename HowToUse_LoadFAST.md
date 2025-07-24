@@ -112,7 +112,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
    **Steps:**
    - Click on **Configure RLS** button.
    
-   <figure><img src="attachment/coll-click-config-rls.png" alt="Configure RLS"><figcaption></figcaption></figure>
+     <figure><img src="attachment/coll-click-config-rls.png" alt="Configure RLS"><figcaption></figcaption></figure>
    
    - Select **Role Name** from Dropdown box
    - Enter the **Email** address.
@@ -160,7 +160,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
    - User can switch to Table View for a tabular representation of data, making it easier to view.
    - Here, users can sort data based on various attributes such as **Name**, **Access**, and **Created Date** for quick access.
    
-   
+
    <figure><img src="attachment/table-view.png" alt="Table View"><figcaption></figcaption></figure> 
  
 
