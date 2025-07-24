@@ -263,7 +263,7 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
 
 1. Click on the **Admin Settings** icon from the sidebar.
 
-   <figure><img src="attachment/admin-enter.png" alt="Select Admin Settings"><figcaption></figcaption></figure>
+     <figure><img src="attachment/admin-enter.png" alt="Select Admin Settings"><figcaption></figcaption></figure>
 
 2. **Cluster Management:**
    - Select a **cluster** from the dropdown.
@@ -311,18 +311,18 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
      - The report and its dataset must also be in the same workspace.
      
      
-     <figure><img src="attachment/admin-insight.png" alt="Insight Report"><figcaption></figcaption></figure>
+    <figure><img src="attachment/admin-insight.png" alt="Insight Report"><figcaption></figcaption></figure>
 
 4. **Capacity Report:** Click on the **Capacity Report** tab.
 
-   <figure><img src="attachment/admin-capapcity-enter.png" alt="Select Capacity"><figcaption></figcaption></figure>
+    <figure><img src="attachment/admin-capapcity-enter.png" alt="Select Capacity"><figcaption></figcaption></figure>
    
    - Set up the Capacity Report by providing:
      - **Workspace ID** and **Workspace Name (Optional)**
      - **Report ID** and **Dataset ID**
      - **Dataset Name (Optional):** e.g., Microsoft Fabric Capacity Metrics
    
-   <figure><img src="attachment/admin-cap-insi.png" alt="Capacity Report"><figcaption></figcaption></figure>
+    <figure><img src="attachment/admin-cap-insi.png" alt="Capacity Report"><figcaption></figcaption></figure>
 
 5. **Load Count:** Click on the **Load Count** tab.
 
