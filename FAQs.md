@@ -26,23 +26,23 @@ Yes, you can upgrade or downgrade your plan at any time through the Azure portal
 **How do I set up and configure LoadFAST?**
 - Step-by-step setup instructions are available in the documentation: [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation)
 - For a quick overview, watch the [Demo video](https://links.maqsoftware.com/LoadFAST-demo)
-<figure><img src="../.gitbook/assets/attachment/faq-collect-not-fetc.png" alt="Collection Not Fetched Toast"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-collect-not-fetc.png" alt="Collection Not Fetched Toast"><figcaption></figcaption></figure>  
 
 
 **What are the key features and advantages of LoadFAST?**
 - Supports load testing across a collection of reports with distributed user loads (concurrent users per report)
-<figure><img src="../.gitbook/assets/attachment/faq-max-load-count.png" alt="Load Count Exceeds Toast"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-max-load-count.png" alt="Load Count Exceeds Toast"><figcaption></figcaption></figure>  
 - Enables concurrent load testing for up to **N users**, ensuring performance under real-world usage patterns
 - Load tests are executed without caching, providing accurate performance metrics
   - Identifies the **most expensive visuals** in a report
   - Measures **page load time** at report, page, and visual levels
   - Provides **user-level analytics** over time for granular performance insights
-<figure><img src="../.gitbook/assets/attachment/faq-rep-fail-user-action.png" alt="Report Failed during User Action"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-rep-fail-user-action.png" alt="Report Failed during User Action"><figcaption></figcaption></figure>  
 
 
 **How does LoadFAST automate load testing with CI/CD integration?**
 
-<figure><img src="../.gitbook/assets/attachment/faq-trigger-off.png" alt="Trigger"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-trigger-off.png" alt="Trigger"><figcaption></figcaption></figure>  
 
 
 
@@ -50,21 +50,21 @@ Yes, you can upgrade or downgrade your plan at any time through the Azure portal
 
 
 ## Potential Failure Scenarios
-<figure><img src="../.gitbook/assets/attachment/faq-Insight-not-loded.png" alt="Insight Report Loading Failed"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-Insight-not-loded.png" alt="Insight Report Loading Failed"><figcaption></figcaption></figure>  
 **What are some possible reasons for failure when using LoadFAST?**
 
-<figure><img src="../.gitbook/assets/attachment/faq-collect-not-fetc.png" alt="Collection Not Fetched Toast"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-collect-not-fetc.png" alt="Collection Not Fetched Toast"><figcaption></figcaption></figure>  
 *Recommended Actions:* 
 - Refresh the page to reload the collections.  
-<figure><img src="../.gitbook/assets/attachment/faq-cap-failed.png" alt="Capacity Report Loading Failed"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-cap-failed.png" alt="Capacity Report Loading Failed"><figcaption></figcaption></figure>  
 
 **Load count exceeds cluster limit**  
 
 - Navigate to Admin Settings and increase the load count as required.  
-<figure><img src="../.gitbook/assets/attachment/edit-icon.png" alt="Edit Icon"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/attachment/edit-icon.png" alt="Edit Icon"><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/attachment/refresh.png" alt="Refresh Icon"><figcaption></figcaption></figure>
-<figure><img src="../.gitbook/assets/attachment/faq-rep-fail-user-action.png" alt="Report Failed during User Action"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/refresh.png" alt="Refresh Icon"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/attachment/faq-rep-fail-user-action.png" alt="Report Failed during User Action"><figcaption></figcaption></figure>  
 
 *Recommended Actions:* 
 - Confirm that embedding is enabled in the Power BI Admin Portal.  
@@ -72,23 +72,23 @@ Yes, you can upgrade or downgrade your plan at any time through the Azure portal
 
 
 **Cluster is turned off when triggering a test**  
-<figure><img src="../.gitbook/assets/attachment/faq-trigger-off.png" alt="Trigger"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-trigger-off.png" alt="Trigger"><figcaption></figcaption></figure>  
 
 *Recommended Actions:* 
 - Navigate to the **Admin Settings** page.  
-<figure><img src="../.gitbook/assets/attachment/faq-go-to-setting.png" alt="Go to Admin Settings"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-go-to-setting.png" alt="Go to Admin Settings"><figcaption></figcaption></figure>  
 - Under **Management Type**, select **Manual** if not already set.  
-<figure><img src="../.gitbook/assets/attachment/Faq-manual-select.png" alt="Change Cluster Status"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/Faq-manual-select.png" alt="Change Cluster Status"><figcaption></figcaption></figure>  
 - Toggle the cluster status switch to **ON**.  
-<figure><img src="../.gitbook/assets/attachment/Faq-toggle-on.png" alt="Toggle On"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/Faq-toggle-on.png" alt="Toggle On"><figcaption></figcaption></figure>  
 - Click **Apply** to activate the cluster.
 
 **Insight Report fetch failed**  
-<figure><img src="../.gitbook/assets/attachment/faq-Insight-not-loded.png" alt="Insight Report Loading Failed"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-Insight-not-loded.png" alt="Insight Report Loading Failed"><figcaption></figcaption></figure>  
 
 *Recommended Actions:* 
 - Review your configuration details in Admin Settings and update them if necessary.  
-<figure><img src="../.gitbook/assets/attachment/faq-correct-insightdetail.png" alt="Update Insight Details"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-correct-insightdetail.png" alt="Update Insight Details"><figcaption></figcaption></figure>  
 - Click **Apply** to save the changes.
 
 **Insight Report not loading**  
@@ -97,11 +97,11 @@ Yes, you can upgrade or downgrade your plan at any time through the Azure portal
 - Verify that the report is configured correctly in [Power BI Services](https://app.powerbi.com/home).
 
 **Capacity Report fetch failed**  
-<figure><img src="../.gitbook/assets/attachment/faq-cap-failed.png" alt="Capacity Report Loading Failed"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-cap-failed.png" alt="Capacity Report Loading Failed"><figcaption></figcaption></figure>  
 
 *Recommended Actions:* 
 - Review your configuration details in Admin Settings and update them if necessary.  
-<figure><img src="../.gitbook/assets/attachment/faq-capacity-detail-update.png" alt="Update Capacity Details"><figcaption></figcaption></figure>  
+<figure><img src=".gitbook/assets/attachment/faq-capacity-detail-update.png" alt="Update Capacity Details"><figcaption></figcaption></figure>  
 - Click **Apply** to save the changes.
 
 **LoadFAST Web App not loading**  
@@ -153,7 +153,7 @@ Contact support.
   - **No**, currently you can't delete a collection.
 
 **Can I edit a collection?**
-  - **Yes**, on the collection you will see <figure><img src="../.gitbook/assets/attachment/edit-icon.png" alt="Edit Icon"><figcaption></figcaption></figure>. Click on it to edit the collection.
+  - **Yes**, on the collection you will see <figure><img src=".gitbook/assets/attachment/edit-icon.png" alt="Edit Icon"><figcaption></figcaption></figure>. Click on it to edit the collection.
 
 **Can I change collaborators after creating a collection?**
   - **Yes**, you can **add/remove** any collaborator.
@@ -191,7 +191,7 @@ Contact support.
   - It represents the **calculated distribution** of user load across clusters, based on the **percentage values** you’ve entered for each. It should be *100* to create a test run.
 
 **I clicked the Trigger button, but nothing happened. Why?**
-  - If you see a **triggered successful** toast, it will *display the result after some time*. Just refresh the page using <figure><img src="../.gitbook/assets/attachment/refresh.png" alt="Refresh Icon"><figcaption></figcaption></figure>; otherwise, check the cluster from admin settings.
+  - If you see a **triggered successful** toast, it will *display the result after some time*. Just refresh the page using <figure><img src=".gitbook/assets/attachment/refresh.png" alt="Refresh Icon"><figcaption></figcaption></figure>; otherwise, check the cluster from admin settings.
 
 **Why is the Trigger button disabled?**
   - Either you have only **Viewer** access or the **Clusters** are off; start the cluster from admin settings.
