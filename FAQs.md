@@ -55,7 +55,6 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 - User authentication and access are managed via secure Azure AD integration.
 
 
-
 ## Potential Failure Scenarios
 
 **What are some possible reasons for failure when using LoadFAST?**
@@ -71,38 +70,64 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 - If the issue persists, verify that the post-deployment PowerShell script has executed successfully.
 
 **Load count exceeds cluster limit**  
-![Load Count Exceeds Toast](attachment/faq-max-load-count.png)  
+<figure>
+  <img src=".gitbook/assets/attachment/faq-max-load-count.png" alt="Load Count Exceeds Toast">
+  <figcaption>Load Count Exceeds Toast</figcaption>
+</figure>
 
 *Recommended Actions:* 
 - Navigate to Admin Settings and increase the load count as required.  
-![Increase Load Count](attachment/faq-inc-load-count.png)
+<figure>
+  <img src=".gitbook/assets/attachment/faq-inc-load-count.png" alt="Increase Load Count">
+  <figcaption>Increase Load Count</figcaption>
+</figure>
 
 **Report embedding failed while adding user action**  
-![Report Failed during User Action](attachment/faq-rep-fail-user-action.png)  
+<figure>
+  <img src=".gitbook/assets/attachment/faq-rep-fail-user-action.png" alt="Report Failed during User Action">
+  <figcaption>Report Failed during User Action</figcaption>
+</figure>
 
 *Recommended Actions:* 
 - Confirm that embedding is enabled in the Power BI Admin Portal.  
 - Ensure that tenant settings are configured correctly. For detailed instructions, refer to the [technical documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/prepare/pre-deployment/set-up-and-configure-the-power-bi-tenant-settings).
 
-
 **Cluster is turned off when triggering a test**  
-![Trigger](attachment/faq-trigger-off.png)  
+<figure>
+  <img src=".gitbook/assets/attachment/faq-trigger-off.png" alt="Trigger Cluster Off">
+  <figcaption>Trigger Cluster Off</figcaption>
+</figure>  
 
 *Recommended Actions:* 
 - Navigate to the **Admin Settings** page.  
-![Go to Admin Settings](attachment/faq-go-to-setting.png)  
+<figure>
+  <img src=".gitbook/assets/attachment/faq-go-to-setting.png" alt="Go to Admin Settings">
+  <figcaption>Go to Admin Settings</figcaption>
+</figure>  
 - Under **Management Type**, select **Manual** if not already set.  
-![Change Cluster Status](attachment/Faq-manual-select.png)  
+<figure>
+  <img src=".gitbook/assets/attachment/Faq-manual-select.png" alt="Change Cluster Status">
+  <figcaption>Change Cluster Status</figcaption>
+</figure>  
 - Toggle the cluster status switch to **ON**.  
-![Toggle On](attachment/Faq-toggle-on.png)  
+<figure>
+  <img src=".gitbook/assets/attachment/Faq-toggle-on.png" alt="Toggle On">
+  <figcaption>Toggle On</figcaption>
+</figure>  
 - Click **Apply** to activate the cluster.
 
 **Insight Report fetch failed**  
-![Insight Report Loading Failed](attachment/faq-Insight-not-loded.png)  
+<figure>
+  <img src=".gitbook/assets/attachment/faq-Insight-not-loded.png" alt="Insight Report Loading Failed">
+  <figcaption>Insight Report Loading Failed</figcaption>
+</figure>  
 
 *Recommended Actions:* 
 - Review your configuration details in Admin Settings and update them if necessary.  
-![Update Insight Details](attachment/faq-correct-insightdetail.png)  
+<figure>
+  <img src=".gitbook/assets/attachment/faq-correct-insightdetail.png" alt="Update Insight Details">
+  <figcaption>Update Insight Details</figcaption>
+</figure>  
 - Click **Apply** to save the changes.
 
 **Insight Report not loading**  
@@ -111,11 +136,17 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 - Verify that the report is configured correctly in [Power BI Services](https://app.powerbi.com/home).
 
 **Capacity Report fetch failed**  
-![Capacity Report Loading Failed](attachment/faq-cap-failed.png)  
+<figure>
+  <img src=".gitbook/assets/attachment/faq-cap-failed.png" alt="Capacity Report Loading Failed">
+  <figcaption>Capacity Report Loading Failed</figcaption>
+</figure>  
 
 *Recommended Actions:* 
 - Review your configuration details in Admin Settings and update them if necessary.  
-![Update Capacity Details](attachment/faq-capacity-detail-update.png)  
+<figure>
+  <img src=".gitbook/assets/attachment/faq-capacity-detail-update.png" alt="Update Capacity Details">
+  <figcaption>Update Capacity Details</figcaption>
+</figure>  
 - Click **Apply** to save the changes.
 
 **LoadFAST Web App not loading**  
