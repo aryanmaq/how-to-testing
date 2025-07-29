@@ -89,21 +89,25 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 
 **Cluster is turned off when triggering a test**  
 <figure>
-  <img src=".gitbook/assets/attachment/faq-trigger-off.png" alt="Trigger Cluster Off">
-</figure>  
+  <img src=".gitbook/assets/attachment/faq-trigger-off.png" alt="Trigger Cluster Off"></figure>  
+
 *Recommended Actions:*  
+
    - Navigate to the **Admin Settings** page.  
    <figure>
      <img src=".gitbook/assets/attachment/faq-go-to-setting.png" alt="Go to Admin Settings">
    </figure>  
+   
    - Under **Management Type**, select **Manual** if not already set.  
    <figure>
      <img src=".gitbook/assets/attachment/Faq-manual-select.png" alt="Change Cluster Status">
    </figure>  
+   
    - Toggle the cluster status switch to **ON**.  
    <figure>
      <img src=".gitbook/assets/attachment/Faq-toggle-on.png" alt="Toggle On">
    </figure>  
+   
    - Click **Apply** to activate the cluster.
 
 
@@ -117,6 +121,7 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 <figure>
   <img src=".gitbook/assets/attachment/faq-correct-insightdetail.png" alt="Update Insight Details">
 </figure>  
+
 - Click **Apply** to save the changes.
 
 
@@ -131,10 +136,12 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 </figure>  
 
 *Recommended Actions:*  
+
 - Review your configuration details in Admin Settings and update them if necessary.  
 <figure>
   <img src=".gitbook/assets/attachment/faq-capacity-detail-update.png" alt="Update Capacity Details">
 </figure>  
+
 - Click **Apply** to save the changes.
 
 **LoadFAST Web App not loading**  
