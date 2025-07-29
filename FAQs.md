@@ -58,7 +58,7 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 
 **What are some possible reasons for failure when using LoadFAST?**
 
-**Collections not fetched while creating a new collection**  
+**Failed to retrieve existing collections**  
 <figure>
   <img src=".gitbook/assets/attachment/faq-collect-not-fetc.png" alt="Collection Not Fetched Toast">
 </figure>
@@ -73,10 +73,13 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 </figure>
 
 *Recommended Actions:*  
-- Navigate to Admin Settings and increase the load count as required.  
-<figure>
-  <img src=".gitbook/assets/attachment/faq-inc-load-count.png" alt="Increase Load Count">
-</figure>
+- If the current cluster load count is less than the maximum load count limit, navigate to Admin Settings and increase the load count as needed.
+   <figure>
+     <img src=".gitbook/assets/attachment/faq-inc-load-count.png" alt="Increase Load Count">
+   </figure>
+   
+- If the current cluster load count is equal to or greater than the maximum limit, reduce the load count in your test run.
+
 
 **Report embedding failed while adding user action**  
 <figure>
@@ -84,31 +87,33 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 </figure>
 
 *Recommended Actions:*  
-- Confirm that embedding is enabled in the Power BI Admin Portal.  
+- Confirm that embedding is enabled in the [Power BI Admin Portal](https://app.powerbi.com/home).  
 - Ensure that tenant settings are configured correctly. For detailed instructions, refer to the [technical documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/prepare/pre-deployment/set-up-and-configure-the-power-bi-tenant-settings#configure-the-tenant-settings).
 
-**Cluster is turned off when triggering a test**  
+**Unable to trigger the test**  
 <figure>
   <img src=".gitbook/assets/attachment/faq-trigger-off.png" alt="Trigger Cluster Off"></figure>  
 
 *Recommended Actions:*  
 
-   - Navigate to the **Admin Settings** page.  
-   <figure>
-     <img src=".gitbook/assets/attachment/faq-go-to-setting.png" alt="Go to Admin Settings">
-   </figure>  
+- This issue may occur if the cluster is turned off. To resolve it, follow these steps:
    
-   - Under **Management Type**, select **Manual** if not already set.  
-   <figure>
-     <img src=".gitbook/assets/attachment/Faq-manual-select.png" alt="Change Cluster Status">
-   </figure>  
+     - Navigate to the **Admin Settings** page.  
+     <figure>
+       <img src=".gitbook/assets/attachment/faq-go-to-setting.png" alt="Go to Admin Settings">
+     </figure>
    
-   - Toggle the cluster status switch to **ON**.  
-   <figure>
-     <img src=".gitbook/assets/attachment/Faq-toggle-on.png" alt="Toggle On">
-   </figure>  
+     - Under **Management Type**, ensure **Manual** is selected.  
+     <figure>
+       <img src=".gitbook/assets/attachment/Faq-manual-select.png" alt="Change Cluster Status">
+     </figure>
    
-   - Click **Apply** to activate the cluster.
+     - Toggle the cluster status switch to **ON**.  
+     <figure>
+       <img src=".gitbook/assets/attachment/Faq-toggle-on.png" alt="Toggle On">
+     </figure>
+   
+     - Click **Apply** to activate the cluster.
 
 
 **Insight Report fetch failed**  
