@@ -63,21 +63,21 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 **What are some possible reasons for failure when using LoadFAST?**
 
 **Collections not fetched while creating a new collection**  
-![Collection Not Fetched Toast](attachment\faq-collect-not-fetc.png)  
+![Collection Not Fetched Toast](attachment/faq-collect-not-fetc.png)  
 
 *Recommended Actions:* 
 - Refresh the page to reload the collections.  
 - If the issue persists, verify that the post-deployment PowerShell script has executed successfully.
 
 **Load count exceeds cluster limit**  
-![Load Count Exceeds Toast](attachment\faq-max-load-count.png)  
+![Load Count Exceeds Toast](attachment/faq-max-load-count.png)  
 
 *Recommended Actions:* 
 - Navigate to Admin Settings and increase the load count as required.  
-![Increase Load Count](attachment\faq-inc-load-count.png)
+![Increase Load Count](attachment/faq-inc-load-count.png)
 
 **Report embedding failed while adding user action**  
-![Report Failed during User Action](attachment\faq-rep-fail-user-action.png)  
+![Report Failed during User Action](attachment/faq-rep-fail-user-action.png)  
 
 *Recommended Actions:* 
 - Confirm that embedding is enabled in the Power BI Admin Portal.  
@@ -97,11 +97,11 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 - Click **Apply** to activate the cluster.
 
 **Insight Report fetch failed**  
-![Insight Report Loading Failed](attachment\faq-Insight-not-loded.png)  
+![Insight Report Loading Failed](attachment/faq-Insight-not-loded.png)  
 
 *Recommended Actions:* 
 - Review your configuration details in Admin Settings and update them if necessary.  
-![Update Insight Details](attachment\faq-correct-insightdetail.png)  
+![Update Insight Details](attachment/faq-correct-insightdetail.png)  
 - Click **Apply** to save the changes.
 
 **Insight Report not loading**  
@@ -110,11 +110,11 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 - Verify that the report is configured correctly in [Power BI Services](https://app.powerbi.com/home).
 
 **Capacity Report fetch failed**  
-![Capacity Report Loading Failed](attachment\faq-cap-failed.png)  
+![Capacity Report Loading Failed](attachment/faq-cap-failed.png)  
 
 *Recommended Actions:* 
 - Review your configuration details in Admin Settings and update them if necessary.  
-![Update Capacity Details](attachment\faq-capacity-detail-update.png)  
+![Update Capacity Details](attachment/faq-capacity-detail-update.png)  
 - Click **Apply** to save the changes.
 
 **LoadFAST Web App not loading**  
