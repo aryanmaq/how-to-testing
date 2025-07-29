@@ -97,7 +97,7 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 
 *Recommended Actions:*  
 
-- This issue may occur if the cluster is turned off. To resolve it, follow these steps:
+- This can occur if the clusters are turned off. To resolve this, follow these steps:
    
      - Navigate to the **Admin Settings** page.  
      <figure>
