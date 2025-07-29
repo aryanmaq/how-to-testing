@@ -85,27 +85,27 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 
 *Recommended Actions:*  
 - Confirm that embedding is enabled in the Power BI Admin Portal.  
-- Ensure that tenant settings are configured correctly. For detailed instructions, refer to the [technical documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/prepare/pre-deployment/set-up-and-configure-the-power-bi-tenant-settings).
+- Ensure that tenant settings are configured correctly. For detailed instructions, refer to the [technical documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/prepare/pre-deployment/set-up-and-configure-the-power-bi-tenant-settings#configure-the-tenant-settings).
 
 **Cluster is turned off when triggering a test**  
 <figure>
   <img src=".gitbook/assets/attachment/faq-trigger-off.png" alt="Trigger Cluster Off">
 </figure>  
-
 *Recommended Actions:*  
-- Navigate to the **Admin Settings** page.  
-<figure>
-  <img src=".gitbook/assets/attachment/faq-go-to-setting.png" alt="Go to Admin Settings">
-</figure>  
-- Under **Management Type**, select **Manual** if not already set.  
-<figure>
-  <img src=".gitbook/assets/attachment/Faq-manual-select.png" alt="Change Cluster Status">
-</figure>  
-- Toggle the cluster status switch to **ON**.  
-<figure>
-  <img src=".gitbook/assets/attachment/Faq-toggle-on.png" alt="Toggle On">
-</figure>  
-- Click **Apply** to activate the cluster.
+   - Navigate to the **Admin Settings** page.  
+   <figure>
+     <img src=".gitbook/assets/attachment/faq-go-to-setting.png" alt="Go to Admin Settings">
+   </figure>  
+   - Under **Management Type**, select **Manual** if not already set.  
+   <figure>
+     <img src=".gitbook/assets/attachment/Faq-manual-select.png" alt="Change Cluster Status">
+   </figure>  
+   - Toggle the cluster status switch to **ON**.  
+   <figure>
+     <img src=".gitbook/assets/attachment/Faq-toggle-on.png" alt="Toggle On">
+   </figure>  
+   - Click **Apply** to activate the cluster.
+
 
 **Insight Report fetch failed**  
 <figure>
@@ -118,6 +118,7 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
   <img src=".gitbook/assets/attachment/faq-correct-insightdetail.png" alt="Update Insight Details">
 </figure>  
 - Click **Apply** to save the changes.
+
 
 **Insight Report not loading**  
 
