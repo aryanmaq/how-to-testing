@@ -7,6 +7,7 @@
 - **Free Plan:** Perform load test up to 50 users ($0 + Azure infra cost).
    - With the Free Plan, platform fees are not charged; however, Azure infrastructure costs are borne by the user
 - **Pro Plan:** No limit on number of users ($1500/month + Azure infra cost)
+  
 *Note: Free support and upgrades are available in both the plans.*
 
 **Where can I purchase LoadFAST?**
