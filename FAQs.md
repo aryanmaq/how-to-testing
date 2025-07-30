@@ -43,7 +43,6 @@ To upgrade to the Pro plan, redeploy the application and select "Pro" when promp
 - Run load tests with customizable load counts at the report level.
 - Analyze detailed performance metrics for collections, reports, pages, and visuals with Insight Report.
 - Review capacity usage and optimization metrics with Capacity Report.
-- Use Admin Settings to manage cluster states, load counts, and report configurations (admin access required).
 - Evaluate the impact of reports on Fabric capacity utilization.
 - Optimize Fabric capacity for maximum efficiency.
 - Analyze report performance, including load times and user interactions.
@@ -61,8 +60,10 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 ## Data Privacy & Security
 
 **How does LoadFAST handle data privacy and security?**
-- LoadFAST does not store your report data. Only performance metrics and test configurations are retained for analysis.
-- User authentication and access are managed via secure Azure AD integration.
+- LoadFAST does not collect any personal information, Customer Data, or anything related to your device when you use our applications.
+- We do not collect or have access to any information that can identify you when you purchase an app or download a trial.
+- We will never sell or share information collected as part of a trial or purchase of any of our apps without your written consent. Information collected by Microsoft as part of trial or purchase falls under the Microsoft Privacy Policy.
+- We may collect usage and download statistics, trends, or any other Administrator Data that Office 365 application administrators are provided with, but not the specific usage of any user.
 
 ## Potential Failure Scenarios
 
@@ -279,13 +280,14 @@ Please ensure you have selected the relevant collection. If the issue persists, 
 
 **Checklist for Users: Validate Before Using LoadFAST**
 
-- [ ] Select a LoadFAST plan
-- [ ] Purchase via Azure Marketplace
-- [ ] Access setup documentation and demo
-- [ ] Check Azure/Power BI prerequisites
-- [ ] Review features
-- [ ] Know failure scenarios
-- [ ] Review common issues
-- [ ] Start test with a report
+Before getting started with LoadFAST, ensure the following steps are completed:
+
+- [ ] **Select** and **Deploy** LoadFAST from the [Azure Marketplace](https://azuremarketplace.microsoft.com)
+- [ ] **Verify all prerequisites** are met, including necessary Azure resources and Power BI permissions.
+- [ ] Review the setup [documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation) available in both the Azure Marketplace and the tool.
+- [ ] Read the [How to Use LoadFAST](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/how_to_use) guide to understand the tool's features and workflow.
+- [ ] Check the [FAQ section](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/faqs) for quick answers to common questions or issues.
+
+✅ Once all steps are complete, you're ready to start using LoadFAST!
 
 ---
