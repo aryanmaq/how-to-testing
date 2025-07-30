@@ -4,11 +4,12 @@
 ## Subscription Plans
 
 **What plans are available for LoadFAST?**
-- **Free Plan:** Perform load test up to 50 users ($0 + Azure infra cost).
-   - With the Free Plan, platform fees are not charged; however, Azure infrastructure costs are borne by the user
-- **Pro Plan:** No limit on number of users ($1500/month + Azure infra cost)
-  
-*Note: Free support is available in both the plans.*
+
+- **Free Plan:** Perform load tests for up to 50 users ($0 + Azure infrastructure cost).
+  - With the Free Plan, platform fees are not charged; however, Azure infrastructure costs are borne by the user.
+- **Pro Plan:** No limit on the number of users ($1500/month + Azure infrastructure cost)
+
+*Note: Free support is available with both plans.*
 
 **Where can I purchase LoadFAST?**
 
@@ -30,8 +31,8 @@ To upgrade to the Pro plan, redeploy the application and select "Pro" when promp
 ## Set Up Details
 
 **How do I set up and configure LoadFAST?**
-- Step-by-step setup instructions are available in the documentation: [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation)
-- For a quick overview, watch the [Demo video](https://links.maqsoftware.com/LoadFAST-demo)
+- Step-by-step setup instructions are available in the documentation: [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation).
+- For a quick overview, watch the [Demo video](https://links.maqsoftware.com/LoadFAST-demo).
 
 
 
@@ -45,9 +46,9 @@ To upgrade to the Pro plan, redeploy the application and select "Pro" when promp
 - Use Admin Settings to manage cluster states, load counts, and report configurations (admin access required).
 - Evaluate the impact of reports on Fabric capacity utilization.
 - Optimize Fabric capacity for maximum efficiency.
-- Analyze report performance, including load times and user interactions.                     
+- Analyze report performance, including load times and user interactions.
 - Identify reports and visuals with high load times.
-- Manage Fabric capacity utilization to ensure ideal setup across multiple reports and avoid under- or over-provisioning.
+- Manage Fabric capacity utilization to ensure the ideal setup across multiple reports and avoid under- or over-provisioning.
 
 
 ## GIT Integration Feature
@@ -72,25 +73,26 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
   <img src=".gitbook/assets/attachment/faq-collect-not-fetc.png" alt="Collection Not Fetched Toast">
 </figure>
 
-*Recommended Actions:*  
-- Refresh the page to reload the collections.  
+*Recommended Actions:*
+- Refresh the page to reload the collections.
 - If the issue persists, verify that the post-deployment PowerShell script has executed successfully.
 
-**Load count exceeds cluster limit**  
+**Load count exceeds cluster limit**
 <figure>
   <img src=".gitbook/assets/attachment/faq-max-load-count.png" alt="Load Count Exceeds Toast">
 </figure>
 
-*Recommended Actions:*  
+*Recommended Actions:*
 - If the current cluster load count is less than the maximum load count limit, navigate to Admin Settings and increase the load count as needed.
-   <figure>
-     <img src=".gitbook/assets/attachment/faq-inc-load-count.png" alt="Increase Load Count">
-   </figure>
-   
+
+  <figure>
+    <img src=".gitbook/assets/attachment/faq-inc-load-count.png" alt="Increase Load Count">
+  </figure>
+  
 - If the current cluster load count is equal to or greater than the maximum limit, reduce the load count in your test run.
 
 
-**Report embedding failed while adding user action**  
+**Report embedding failed while adding user action**
 <figure>
   <img src=".gitbook/assets/attachment/faq-rep-fail-user-action.png" alt="Report Failed during User Action">
 </figure>
@@ -207,18 +209,18 @@ If you encounter this message, please contact [our team](mailto:Sales@MAQSoftwar
   - **No**, there is currently no option available in the application to delete a collection.If deletion is required, it can be performed by executing a SQL query directly on the backend database. For assistance with this process, please contact support team.
 
 **Can I edit a collection?**
-  - **Yes**, you can update the report until a test run is created. If a test run is created but not triggered, you can still change collaborators, refer [this](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/how_to_use#create-collection) for detailed guide.
+  - **Yes**, you can update the report until a test run is created. If a test run is created but not triggered, you can still change collaborators. Refer to [this guide](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/how_to_use#create-collection) for details.
 
 **Can I change collaborators after creating a collection?**
-  - **Yes**, you can **add/remove** any collaborator, until test run is triggered. After triggering a test run, collaborator changes are not allowed.
+  - **Yes**, you can add or remove any collaborator until the test run is triggered. After triggering a test run, collaborator changes are not allowed.
 
 **Can I change the report after creating a collection?**
-  - **Yes**, if you *haven't created a test run*, you can change the report.
+  - **Yes**, if you have not created a test run, you can change the report.
 
 ### Main Page
 
 **How can I find an old collection?**
-  - Using **Search Bar** and **Filters**, you can easily find the collection.
+  - Using the **Search Bar** and **Filters**, you can easily find the collection.
 
 **How can I see only the collections I created?** 
   - In **My Collection**, you will see the collections you created.
@@ -270,7 +272,7 @@ If you encounter this message, please contact [our team](mailto:Sales@MAQSoftwar
 ### Insight Report
 
 **Why is nothing visible in my Insight Report?**
-Please ensure you have selected the relevant collection. If the issue persists, review your configuration in Admin Settings. If the problem continues, verify the report configuration in [Power BI services](https://app.powerbi.com/home).
+Please ensure you have selected the relevant collection. If the issue persists, review your configuration in Admin Settings. If the problem continues, verify the report configuration in [Power BI Services](https://app.powerbi.com/home).
 
 
 ## High Level Checklist
@@ -279,7 +281,7 @@ Please ensure you have selected the relevant collection. If the issue persists, 
 
 - [ ] Select a LoadFAST plan
 - [ ] Purchase via Azure Marketplace
-- [ ] Access setup docs and demo
+- [ ] Access setup documentation and demo
 - [ ] Check Azure/Power BI prerequisites
 - [ ] Review features
 - [ ] Know failure scenarios
