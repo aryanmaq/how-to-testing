@@ -8,16 +8,23 @@
    - With the Free Plan, platform fees are not charged; however, Azure infrastructure costs are borne by the user
 - **Pro Plan:** No limit on number of users ($1500/month + Azure infra cost)
   
-*Note: Free support and upgrades are available in both the plans.*
+*Note: Free support is available in both the plans.*
 
 **Where can I purchase LoadFAST?**
+
 You can purchase LoadFAST from the [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=PlansAndPrice).
 
 **How will I be billed for my subscription?**
+
 Your subscription charges will appear on your monthly Azure invoice.
 
 **Can I change my plan after purchase?**
+
 Yes, you can upgrade or downgrade your plan at any time through the Azure portal.
+
+**How do I upgrade to the Pro plan?**
+
+To upgrade to the Pro plan, redeploy the application and select "Pro" when prompted in the Azure Marketplace. For detailed, step-by-step instructions, please refer to the official [deployment guide](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/deploy/deploy-automatically-via-azure-marketplace). When selecting a plan, choose "Pro"; the remaining steps are the same as the initial deployment.
 
 
 ## Set Up Details
@@ -31,15 +38,16 @@ Yes, you can upgrade or downgrade your plan at any time through the Azure portal
 ## Key Features & Capabilities
 
 **What are the key features and advantages of LoadFAST?**
-- Supports load testing across a collection of reports with distributed user loads (concurrent users per report)
-- Simulates realistic user interactions and applies Row-Level Security (RLS) during tests
-- Enables concurrent load testing for up to **N users**, ensuring performance under real-world usage patterns
-- Load tests are executed without caching, providing accurate performance metrics
-- Detailed Insights & Reporting:
-  - Identifies the **most expensive visuals** in a report
-  - Measures **page load time** at report, page, and visual levels
-  - Provides **user-level analytics** over time for granular performance insights
-- Correlates test results with Microsoft Fabric capacity metrics for better resource planning
+- Create collections to group multiple reports, add collaborators, apply user actions, and perform test runs.
+- Run load tests with customizable load counts at the report level.
+- Analyze detailed performance metrics for collections, reports, pages, and visuals with Insight Report.
+- Review capacity usage and optimization metrics with Capacity Report.
+- Use Admin Settings to manage cluster states, load counts, and report configurations (admin access required).
+- Evaluate the impact of reports on Fabric capacity utilization.
+- Optimize Fabric capacity for maximum efficiency.
+- Analyze report performance, including load times and user interactions.                     
+- Identify reports and visuals with high load times.
+- Manage Fabric capacity utilization to ensure ideal setup across multiple reports and avoid under- or over-provisioning.
 
 
 ## GIT Integration Feature
@@ -168,11 +176,11 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 
 **Why is the page not loading?**
 
-Clear cache and refresh.
+If the page is not loading, please try clearing your browser cache and refreshing the page.
 
 **What should I do if I see 'Something Went Wrong'?**
 
-Contact support.
+If you encounter this message, please contact [our team](mailto:Sales@MAQSoftware.com).
 
 ---
 
@@ -196,13 +204,13 @@ Contact support.
 ### Edit Collection
 
 **Can I delete a collection?**
-  - **No**, currently you can't delete a collection.
+  - **No**, there is currently no option available in the application to delete a collection.If deletion is required, it can be performed by executing a SQL query directly on the backend database. For assistance with this process, please contact support team.
 
 **Can I edit a collection?**
-  - **Yes**, on the collection you will see ![Edit Icon](attachment/edit-icon.png). Click on it to edit the collection.
+  - **Yes**, you can update the report until a test run is created. If a test run is created but not triggered, you can still change collaborators, refer [this](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/how_to_use#create-collection) for detailed guide.
 
 **Can I change collaborators after creating a collection?**
-  - **Yes**, you can **add/remove** any collaborator.
+  - **Yes**, you can **add/remove** any collaborator, until test run is triggered. After triggering a test run, collaborator changes are not allowed.
 
 **Can I change the report after creating a collection?**
   - **Yes**, if you *haven't created a test run*, you can change the report.
@@ -231,7 +239,7 @@ Contact support.
   - Use **Percentage split** when you want to divide the user count across the report based on specified percentages.
 
 **What does 'Total Load Testing Count' mean?**
-  - It means the **total number of virtual machines** you want to simulate in the test run.
+  - It means the **total number of  concurrent users** you want to simulate in the test run.
 
 **What does 'Total Percentage Count: Effective' mean?**
   - It represents the **calculated distribution** of user load across clusters, based on the **percentage values** you’ve entered for each. It should be *100* to create a test run.
@@ -254,7 +262,7 @@ Contact support.
   - Go to **Admin Settings > Cluster Management**, select management type **Manual**, and toggle the **ON/OFF** button.
 
 **Why isn't the cluster starting after selecting 'Auto'?**
-  - In **Auto**, the cluster only gets **stopped** after the specified hours. To start the cluster, you have to **manually** start it.
+  - In **Auto**, the cluster only gets **stopped** after the specified hours. To start the cluster, you have to select management type **Manual**, and toggle the **ON/OFF** button for step-by-step guide refer [documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/how_to_use#admin-settings).
 
 **Can anyone start/stop the same cluster?**
   - **No**, only the admin can start/stop the cluster.
@@ -262,23 +270,20 @@ Contact support.
 ### Insight Report
 
 **Why is nothing visible in my Insight Report?**
-Most likely, you haven't selected the Collection or there is an issue in the configuration.
-
+Please ensure you have selected the relevant collection. If the issue persists, review your configuration in Admin Settings. If the problem continues, verify the report configuration in [Power BI services](https://app.powerbi.com/home).
 
 
 ## High Level Checklist
 
-**Checklist for Users: Validate Before Implementing LoadFAST**
+**Checklist for Users: Validate Before Using LoadFAST**
 
 - [ ] Select a LoadFAST plan
 - [ ] Purchase via Azure Marketplace
 - [ ] Access setup docs and demo
 - [ ] Check Azure/Power BI prerequisites
-- [ ] Set up GIT integration (if needed)
 - [ ] Review features
-- [ ] Check privacy and security
 - [ ] Know failure scenarios
-- [ ] Test with sample reports
 - [ ] Review common issues
+- [ ] Start test with a report
 
 ---
