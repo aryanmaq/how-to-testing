@@ -1,23 +1,18 @@
 # LoadFAST FAQ's
 
-
 ## Subscription Plans
 
-**What plans are available for LoadFAST?**
+**What subscription plans are available for LoadFAST?**
 
 - **Free Plan:** Perform load tests for up to 50 users ($0 + Azure infrastructure cost).
   - With the Free Plan, platform fees are not charged; however, Azure infrastructure costs are borne by the user.
 - **Pro Plan:** No limit on the number of users ($1500/month + Azure infrastructure cost)
 
-*Note: Free support is available with both plans.*
+*Note: Free support is available for both plans. Azure infrastructure costs are mandatory for all users.*
 
 **Where can I purchase LoadFAST?**
 
-You can purchase LoadFAST from the [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=PlansAndPrice).
-
-**How will I be billed for my subscription?**
-
-Your subscription charges will appear on your monthly Azure invoice.
+You can purchase LoadFAST from the [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview).
 
 **Can I change my plan after purchase?**
 
@@ -25,7 +20,15 @@ Yes, you can upgrade or downgrade your plan at any time through the Azure portal
 
 **How do I upgrade to the Pro plan?**
 
-To upgrade to the Pro plan, redeploy the application and select "Pro" when prompted in the Azure Marketplace. For detailed, step-by-step instructions, please refer to the official [deployment guide](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/deploy/deploy-automatically-via-azure-marketplace). When selecting a plan, choose "Pro"; the remaining steps are the same as the initial deployment.
+To upgrade to the Pro plan, follow these steps:
+
+- Navigate to the [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview).
+- Start the redeployment process for LoadFAST.
+- When prompted, select the **Pro** option in the Software Plan dropdown.
+- Complete the remaining steps as you did during your initial deployment.
+- For detailed instructions, refer to the official [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/deploy/deploy-automatically-via-azure-marketplace).
+
+*Note: Upgrading does not affect your existing data or configuration. The process only changes your subscription plan.*
 
 
 ## Set Up Details
@@ -42,28 +45,19 @@ To upgrade to the Pro plan, redeploy the application and select "Pro" when promp
 - Create collections to group multiple reports, add collaborators, apply user actions, and perform test runs.
 - Run load tests with customizable load counts at the report level.
 - Analyze detailed performance metrics for collections, reports, pages, and visuals with Insight Report.
-- Review capacity usage and optimization metrics with Capacity Report.
 - Evaluate the impact of reports on Fabric capacity utilization.
 - Optimize Fabric capacity for maximum efficiency.
-- Analyze report performance, including load times and user interactions.
+- Analyze report performance, including user load and interactions.
 - Identify reports and visuals with high load times.
 - Manage Fabric capacity utilization to ensure the ideal setup across multiple reports and avoid under- or over-provisioning.
 
 
 ## GIT Integration Feature
 
-**How does LoadFAST automate load testing with CI/CD integration?**
+**How does LoadFAST automate load testing with GIT integration?**
 
-With CI/CD integration, LoadFAST automates creating collections, defining tests, and triggering runs—all within a single pipeline workflow. This streamlines testing and removes manual steps, making performance validation faster and more reliable.
+With GIT integration, LoadFAST automates creating collections, defining tests, and triggering runs all within a single pipeline workflow. This streamlines testing and removes manual steps, making performance validation faster and more reliable.
 
-
-## Data Privacy & Security
-
-**How does LoadFAST handle data privacy and security?**
-- LoadFAST does not collect any personal information, Customer Data, or anything related to your device when you use our applications.
-- We do not collect or have access to any information that can identify you when you purchase an app or download a trial.
-- We will never sell or share information collected as part of a trial or purchase of any of our apps without your written consent. Information collected by Microsoft as part of trial or purchase falls under the Microsoft Privacy Policy.
-- We may collect usage and download statistics, trends, or any other Administrator Data that Office 365 application administrators are provided with, but not the specific usage of any user.
 
 ## Potential Failure Scenarios
 
@@ -99,8 +93,8 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 </figure>
 
 *Recommended Actions:*  
-- Confirm that embedding is enabled in the [Power BI Admin Portal](https://app.powerbi.com/home).  
-- Ensure that tenant settings are configured correctly. For detailed instructions, refer to the [technical documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/prepare/pre-deployment/set-up-and-configure-the-power-bi-tenant-settings#configure-the-tenant-settings).
+- Confirm that embedding is enabled in the [Power BI Admin Portal](https://app.powerbi.com/admin-portal).  
+- Ensure that tenant settings are configured correctly. For detailed instructions, refer to the [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/prepare/pre-deployment/set-up-and-configure-the-power-bi-tenant-settings#configure-the-tenant-settings).
 
 **Unable to trigger the test**  
 <figure>
@@ -164,12 +158,12 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 **LoadFAST Web App not loading**  
 
 *Recommended Actions:*  
-- Confirm that the application is configured correctly. For guidance, refer to the [setup documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/configure/add-the-redirect-uris#navigate-to-the-redirect-uris-section-1).
+- Confirm that the application is configured correctly. For guidance, refer to the [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/configure/add-the-redirect-uris#navigate-to-the-redirect-uris-section-1).
 
 **Admin Settings icon not visible**  
 
 *Recommended Actions:*  
-- Ensure that the App Role is created. For instructions, see the [documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/prepare/pre-deployment/create-an-app-registration-for-the-loadfast-api#create-an-app-role).  
+- Ensure that the App Role is created. For instructions, see the [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/prepare/pre-deployment/create-an-app-registration-for-the-loadfast-api#create-an-app-role).  
 - Assign the Admin Role as described [here](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/configure/assign-admin-roles-in-the-application).
 
 
@@ -179,13 +173,12 @@ With CI/CD integration, LoadFAST automates creating collections, defining tests,
 
 **Why is the page not loading?**
 
-If the page is not loading, please try clearing your browser cache and refreshing the page.
+- This may be due to incorrect authentication configuration. Please verify your authentication settings.
 
 **What should I do if I see 'Something Went Wrong'?**
 
-If you encounter this message, please contact [our team](mailto:Sales@MAQSoftware.com).
+If you encounter this message, please contact our support team at [loadfast@maqsoftware.com](mailto:loadfast@maqsoftware.com).
 
----
 
 ### Create Collection
 
@@ -209,11 +202,11 @@ If you encounter this message, please contact [our team](mailto:Sales@MAQSoftwar
 **Can I delete a collection?**
   - **No**, there is currently no option available in the application to delete a collection.If deletion is required, it can be performed by executing a SQL query directly on the backend database. For assistance with this process, please contact support team.
 
-**Can I edit a collection?**
-  - **Yes**, you can update the report until a test run is created. If a test run is created but not triggered, you can still change collaborators. Refer to [this guide](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/how_to_use#create-collection) for details.
+**Can I edit a collection?**  
+- **Yes**, you can update the report and modify collaborators **until a test run is created**. For more details, refer to the [LoadFAST Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/how_to_use#create-collection).
 
 **Can I change collaborators after creating a collection?**
-  - **Yes**, you can add or remove any collaborator until the test run is triggered. After triggering a test run, collaborator changes are not allowed.
+  - **Yes**, you can add or remove any collaborator until the test run is created. After creating a test run, collaborator changes are not allowed.
 
 **Can I change the report after creating a collection?**
   - **Yes**, if you have not created a test run, you can change the report.
@@ -259,13 +252,13 @@ If you encounter this message, please contact [our team](mailto:Sales@MAQSoftwar
 ### Admin Settings
 
 **How can I check the status of a cluster?**
-  - Go to **Admin Settings**. Below the selected cluster, you will find the status of the cluster.
+- Navigate to **Admin Settings**, in cluster management the status of each cluster is displayed below the selected cluster.
 
 **How can I start or stop a cluster?**
   - Go to **Admin Settings > Cluster Management**, select management type **Manual**, and toggle the **ON/OFF** button.
 
-**Why isn't the cluster starting after selecting 'Auto'?**
-  - In **Auto**, the cluster only gets **stopped** after the specified hours. To start the cluster, you have to select management type **Manual**, and toggle the **ON/OFF** button for step-by-step guide refer [documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/how_to_use#admin-settings).
+**Why isn't the cluster starting after selecting  management type 'Auto' in cluster management?**
+  - In **Auto**, the cluster only gets **stopped** after the specified hours. To start the cluster, you have to select the management type **Manual**, and toggle the **ON/OFF** button for step-by-step guide refer [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/how_to_use#admin-settings).
 
 **Can anyone start/stop the same cluster?**
   - **No**, only the admin can start/stop the cluster.
@@ -273,6 +266,7 @@ If you encounter this message, please contact [our team](mailto:Sales@MAQSoftwar
 ### Insight Report
 
 **Why is nothing visible in my Insight Report?**
+
 Please ensure you have selected the relevant collection. If the issue persists, review your configuration in Admin Settings. If the problem continues, verify the report configuration in [Power BI Services](https://app.powerbi.com/home).
 
 
@@ -282,9 +276,9 @@ Please ensure you have selected the relevant collection. If the issue persists, 
 
 Before getting started with LoadFAST, ensure the following steps are completed:
 
-- [ ] **Select** and **Deploy** LoadFAST from the [Azure Marketplace](https://azuremarketplace.microsoft.com)
+- [ ] **Select** and **Deploy** LoadFAST from the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview)
+- [ ] Review the setup [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation) available in both the Azure Marketplace and the tool.
 - [ ] **Verify all prerequisites** are met, including necessary Azure resources and Power BI permissions.
-- [ ] Review the setup [documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation) available in both the Azure Marketplace and the tool.
 - [ ] Read the [How to Use LoadFAST](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/how_to_use) guide to understand the tool's features and workflow.
 - [ ] Check the [FAQ section](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/faqs) for quick answers to common questions or issues.
 
