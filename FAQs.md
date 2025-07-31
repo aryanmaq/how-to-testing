@@ -20,7 +20,7 @@ Yes, you can upgrade or downgrade your plan at any time through the Azure portal
 
 **How do I upgrade to the Pro plan?**
 
-To upgrade to the Pro plan, follow these steps:
+To upgrade to the Pro plan, follow these step:
 
 - Navigate to the [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview).
 - Start the redeployment process for LoadFAST.
@@ -284,4 +284,4 @@ Before getting started with LoadFAST, ensure the following steps are completed:
 
 ✅ Once all steps are complete, you're ready to start using LoadFAST!
 
----
+
