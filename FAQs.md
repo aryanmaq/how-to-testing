@@ -68,25 +68,25 @@ With GIT integration, LoadFAST automates creating collections, defining tests, a
 **What are some possible reasons for failure when using LoadFAST?**
 
 **Failed to retrieve existing collections**  
-![Collection Not Fetched Toast](attachment/faq-collect-not-fetc.png)
+<figure><img src="../.gitbook/assets/attachment/faq-collect-not-fetc.png" alt="Collection Not Fetched Toast"><figcaption></figcaption></figure>
 
 *Recommended Actions:*
 - Refresh the page to reload the collections.
 - If the issue persists, please refer to the following checklist and ensure that all steps have been accurately followed: [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/faqs#high-level-checklist).
 
 **Load count exceeds cluster limit**
-![Load Count Exceeds Toast](attachment/faq-max-load-count.png)
+<figure><img src="../.gitbook/assets/attachment/faq-max-load-count.png" alt="Load Count Exceeds Toast"><figcaption></figcaption></figure>
 
 *Recommended Actions:*
 - If the current cluster load count is less than the maximum load count limit, navigate to Admin Settings and increase the load count as needed.
 
-  ![Increase Load Count](attachment/faq-inc-load-count.png)
+  <figure><img src="../.gitbook/assets/attachment/faq-inc-load-count.png" alt="Increase Load Count"><figcaption></figcaption></figure>
   
 - If the current cluster load count is equal to the maximum limit, reduce the load count in your test run.
 
 
 **Report embedding failed while adding user action**
-![Report Failed during User Action](attachment/faq-rep-fail-user-action.png)
+<figure><img src="../.gitbook/assets/attachment/faq-rep-fail-user-action.png" alt="Report Failed during User Action"><figcaption></figcaption></figure>
 
 *Recommended Actions:*  
 - Confirm that embedding is enabled in the [Power BI Admin Portal](https://app.powerbi.com/admin-portal).  
@@ -94,14 +94,14 @@ With GIT integration, LoadFAST automates creating collections, defining tests, a
 
 
 **Unable to trigger the test**  
-![Trigger Cluster Off](attachment/faq-trigger-off.png)
+<figure><img src="../.gitbook/assets/attachment/faq-trigger-off.png" alt="Trigger Cluster Off"><figcaption></figcaption></figure>
 
 *Recommended Actions:*  
 
 - This can occur if the clusters are turned off. To resolve this, follow these steps:
-   - Navigate to the **Admin Settings** page.![Go to Admin Settings](attachment/faq-go-to-setting.png)
-   - Under **Management Type**, ensure **Manual** is selected.![Change Cluster Status](attachment/Faq-manual-select.png)
-   - Toggle the cluster status switch to **ON**.![Toggle On](attachment/Faq-toggle-on.png) 
+   - Navigate to the **Admin Settings** page.<figure><img src="../.gitbook/assets/attachment/faq-go-to-setting.png" alt="Go to Admin Settings"><figcaption></figcaption></figure>
+   - Under **Management Type**, ensure **Manual** is selected.<figure><img src="../.gitbook/assets/attachment/Faq-manual-select.png" alt="Change Cluster Status"><figcaption></figcaption></figure>
+   - Toggle the cluster status switch to **ON**.<figure><img src="../.gitbook/assets/attachment/Faq-toggle-on.png" alt="Toggle On"><figcaption></figcaption></figure> 
   - Click **Apply** to activate the cluster.
 
 **Test run failed**  
