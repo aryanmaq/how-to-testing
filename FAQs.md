@@ -8,27 +8,32 @@
   - With the Free Plan, platform fees are not charged; however, Azure infrastructure costs are borne by the user.
 - **Pro Plan:** No limit on the number of users ($1500/month + Azure infrastructure cost)
 
-*Note: Free support is available for both plans. Azure infrastructure costs are mandatory for all users.*
+**Note**: 
+- Free support is available for both plans. 
+- Azure infrastructure costs are mandatory for both plans.
 
-**Where can I purchase LoadFAST?**
-
-You can purchase LoadFAST from the [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview).
 
 **Can I change my plan after purchase?**
 
 Yes, you can upgrade or downgrade your plan at any time through the Azure portal.
 
+> Note: 
+> - The Free (supports up to 50 users) and Pro (supports any number of users) plans on the Azure Marketplace are published as separate plans, each with its own deployment and underlying resources.
+> - If you plan to use the Pro plan, it will need to be deployed separately, but deployment time will reduce significantly.
+
 **How do I upgrade to the Pro plan?**
 
 To upgrade to the Pro plan, follow these steps:
 
-- Navigate to the [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview).
-- Start the redeployment process for LoadFAST.
-- When prompted, select the **Pro** option in the Software Plan dropdown.
-- Complete the remaining steps as you did during your initial deployment.
+- Navigate to the [Microsoft Azure Marketplace](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/maqsoftware.powerbiloadanalyzer).
+- Select **Pro** from the **Plan** dropdown
+- Click on **Create** button to continue.
+- Follow the same deployment steps as you did for the **Free** plan deployment.
 - For detailed instructions, refer to the official [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/deploy/deploy-automatically-via-azure-marketplace).
 
-*Note: Upgrading does not affect your existing data or configuration. The process only changes your subscription plan.*
+**Note:** 
+- The Pro Plan is deployed in a separate environment, with its own distinct deployment and underlying resources.
+- Data from the **Free Plan** will remain intact, as the Pro Plan operates with separate resources and does not interact with existing Free Plan data.
 
 
 ## Set Up Details
@@ -46,7 +51,6 @@ To upgrade to the Pro plan, follow these steps:
 - Run load tests with customizable load counts at the report level.
 - Analyze detailed performance metrics for collections, reports, pages, and visuals with Insight Report.
 - Evaluate the impact of reports on Fabric capacity utilization.
-- Optimize Fabric capacity for maximum efficiency.
 - Analyze report performance, including user load and interactions.
 - Identify reports and visuals with high load times.
 - Manage Fabric capacity utilization to ensure the ideal setup across multiple reports and avoid under- or over-provisioning.
@@ -64,94 +68,80 @@ With GIT integration, LoadFAST automates creating collections, defining tests, a
 **What are some possible reasons for failure when using LoadFAST?**
 
 **Failed to retrieve existing collections**  
-<figure>
-  <img src=".gitbook/assets/attachment/faq-collect-not-fetc.png" alt="Collection Not Fetched Toast">
-</figure>
+![Collection Not Fetched Toast](attachment/faq-collect-not-fetc.png)
 
 *Recommended Actions:*
 - Refresh the page to reload the collections.
-- If the issue persists, verify that the post-deployment PowerShell script has executed successfully.
+- If the issue persists, please refer to the following checklist and ensure that all steps have been accurately followed: [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/faqs#high-level-checklist).
 
 **Load count exceeds cluster limit**
-<figure>
-  <img src=".gitbook/assets/attachment/faq-max-load-count.png" alt="Load Count Exceeds Toast">
-</figure>
+![Load Count Exceeds Toast](attachment/faq-max-load-count.png)
 
 *Recommended Actions:*
 - If the current cluster load count is less than the maximum load count limit, navigate to Admin Settings and increase the load count as needed.
 
-  <figure>
-    <img src=".gitbook/assets/attachment/faq-inc-load-count.png" alt="Increase Load Count">
-  </figure>
+  ![Increase Load Count](attachment/faq-inc-load-count.png)
   
-- If the current cluster load count is equal to or greater than the maximum limit, reduce the load count in your test run.
+- If the current cluster load count is equal to the maximum limit, reduce the load count in your test run.
 
 
 **Report embedding failed while adding user action**
-<figure>
-  <img src=".gitbook/assets/attachment/faq-rep-fail-user-action.png" alt="Report Failed during User Action">
-</figure>
+![Report Failed during User Action](attachment/faq-rep-fail-user-action.png)
 
 *Recommended Actions:*  
 - Confirm that embedding is enabled in the [Power BI Admin Portal](https://app.powerbi.com/admin-portal).  
 - Ensure that tenant settings are configured correctly. For detailed instructions, refer to the [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/prepare/pre-deployment/set-up-and-configure-the-power-bi-tenant-settings#configure-the-tenant-settings).
 
+
 **Unable to trigger the test**  
-<figure>
-  <img src=".gitbook/assets/attachment/faq-trigger-off.png" alt="Trigger Cluster Off"></figure>  
+![Trigger Cluster Off](attachment/faq-trigger-off.png)
 
 *Recommended Actions:*  
 
 - This can occur if the clusters are turned off. To resolve this, follow these steps:
-   
-     - Navigate to the **Admin Settings** page.  
-     <figure>
-       <img src=".gitbook/assets/attachment/faq-go-to-setting.png" alt="Go to Admin Settings">
-     </figure>
-   
-     - Under **Management Type**, ensure **Manual** is selected.  
-     <figure>
-       <img src=".gitbook/assets/attachment/Faq-manual-select.png" alt="Change Cluster Status">
-     </figure>
-   
-     - Toggle the cluster status switch to **ON**.  
-     <figure>
-       <img src=".gitbook/assets/attachment/Faq-toggle-on.png" alt="Toggle On">
-     </figure>
-   
-     - Click **Apply** to activate the cluster.
+   - Navigate to the **Admin Settings** page.![Go to Admin Settings](attachment/faq-go-to-setting.png)
+   - Under **Management Type**, ensure **Manual** is selected.![Change Cluster Status](attachment/Faq-manual-select.png)
+   - Toggle the cluster status switch to **ON**.![Toggle On](attachment/Faq-toggle-on.png) 
+  - Click **Apply** to activate the cluster.
 
+**Test run failed**  
+![Test Run failed](attachment/faq-test-failed.png)
+
+*Recommended Actions:*
+ - **Report Page/Visual broken:** 
+   - Open the report in Power BI and ensure all visuals are loading correctly.
+   - Fix or remove any broken visuals, then **re-trigger** the test.
+ - **Refresh Token Expired:** 
+   - Refresh the **Tool** to obtain a new token, then **re-trigger** the test.
+ - **Report not embedded:** 
+   - Confirm that embedding is enabled in the [Power BI Admin Portal](https://app.powerbi.com/admin-portal).  
+   - Ensure that tenant settings are configured correctly. For detailed instructions, refer to the [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/prepare/pre-deployment/set-up-and-configure-the-power-bi-tenant-settings#configure-the-tenant-settings).
 
 **Insight Report fetch failed**  
-<figure>
-  <img src=".gitbook/assets/attachment/faq-Insight-not-loded.png" alt="Insight Report Loading Failed">
-</figure>  
+![Insight Report Loading Failed](attachment/faq-Insight-not-loded.png)
 
-*Recommended Actions:*  
+*Recommended Actions:*   
 - Review your configuration details in Admin Settings and update them if necessary.  
-<figure>
-  <img src=".gitbook/assets/attachment/faq-correct-insightdetail.png" alt="Update Insight Details">
-</figure>  
+![Update Insight Details](attachment/faq-correct-insightdetail.png)
 
 - Click **Apply** to save the changes.
+
 
 
 **Insight Report not loading**  
 
 *Recommended Actions:*  
 - Verify that the report is configured correctly in [Power BI Services](https://app.powerbi.com/home).
+- For step-by-step guide, refer to: [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/configure/insight-report)
 
 **Capacity Report fetch failed**  
-<figure>
-  <img src=".gitbook/assets/attachment/faq-cap-failed.png" alt="Capacity Report Loading Failed">
-</figure>  
+![Capacity Report Loading Failed](attachment/faq-cap-failed.png)
 
 *Recommended Actions:*  
 
+
 - Review your configuration details in Admin Settings and update them if necessary.  
-<figure>
-  <img src=".gitbook/assets/attachment/faq-capacity-detail-update.png" alt="Update Capacity Details">
-</figure>  
+![Update Capacity Details](attachment/faq-capacity-detail-update.png)
 
 - Click **Apply** to save the changes.
 
@@ -159,6 +149,7 @@ With GIT integration, LoadFAST automates creating collections, defining tests, a
 
 *Recommended Actions:*  
 - Confirm that the application is configured correctly. For guidance, refer to the [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/configure/add-the-redirect-uris#navigate-to-the-redirect-uris-section-1).
+- Ensure that all steps have been accurately followed in the following checklist: [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/faqs#high-level-checklist).
 
 **Admin Settings icon not visible**  
 
@@ -173,7 +164,24 @@ With GIT integration, LoadFAST automates creating collections, defining tests, a
 
 **Why is the page not loading?**
 
-- This may be due to incorrect authentication configuration. Please verify your authentication settings.
+- This could be due to incorrect values in app settings. Follow below steps to confirm the app setting values:
+  - Go to Azure Portal.
+  - Navigate to the Managed Resource Group that contains all the LoadFAST resources.
+  - Within the resources, you will find two types of App Services. Open the App Service that does not have the -api suffix in its name.
+  - From the left-hand menu, under Settings, click on Configuration (Environment Variables), and verify the values for the following keys:
+    - clientId
+    - subscriptionId
+    - tenant
+  - If any of the above values are incorrect, update them accordingly.
+  - Repeat the same process for the other App Service that has the -api suffix in its name.
+  - Verify the following keys in the app settings:
+    - AzureAd__ClientId
+    - AzureAd__TenantId
+    - env__subscriptionId
+    - env__Tenant
+  - If any of these values are incorrect, update them as needed and restart the App Service after making the changes.
+  - If the issue persists, please contact the support team for further assistance.
+- Confirm that the Redirect URI listed under the 'Single-page application' section in the Platform settings, refer to the [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/configure/add-the-redirect-uris#navigate-to-the-redirect-uris-section-1).
 
 **What should I do if I see 'Something Went Wrong'?**
 
@@ -276,7 +284,8 @@ Please ensure you have selected the relevant collection. If the issue persists, 
 
 Before getting started with LoadFAST, ensure the following steps are completed:
 
-- [ ] **Select** and **Deploy** LoadFAST from the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview)
+- [ ] **Select** and **Deploy** LoadFAST from the [Azure Marketplace](https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/id/maqsoftware.powerbiloadanalyzer
+)
 - [ ] Review the setup [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation) available in both the Azure Marketplace and the tool.
 - [ ] **Verify all prerequisites** are met, including necessary Azure resources and Power BI permissions.
 - [ ] Read the [How to Use LoadFAST](https://maqsoftware.gitbook.io/loadfast-technical-documentation/resources/how_to_use) guide to understand the tool's features and workflow.
