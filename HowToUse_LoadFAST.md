@@ -1,27 +1,29 @@
 # How to Use LoadFAST
 
-**MAQ Software**
-
 ## Table of Contents
 
-- 1. Introduction
+1. Introduction
     - [Purpose](#purpose)
     - [Key Features](#key-features)
     - [System Requirements](#system-requirements)
-- 2. Getting Started
+
+2. Getting Started
    - [Accessing the Application](#accessing-the-application)
-- 3. Navigation and Interface
+
+3. Navigation and Interface
   - [Side Panel](#side-panel)
   - [Header](#header)
   - [Main Content Area](#main-content-area)
-- 4. Key Features & How to Use Them
+
+4. Key Features & How to Use Them
   - [Create Collection](#create-collection)
   - [Create Test Run](#create-test-run)
   - [All Tests](#all-tests)
   - [Admin Settings](#admin-settings)
   - [Insight Report](#insight-report)
   - [Capacity Report](#capacity-report)
-- 5. Appendix
+
+5. Appendix
    - [Glossary](#glossary)
 
 ***
@@ -42,10 +44,9 @@ LoadFAST is a load testing tool for Power BI reports that uses virtual users to 
 4. **Insight Report:** Analyze detailed performance metrics for collections, reports, pages, and visuals.
 5. **Capacity Report:** Analyze capacity usage and optimization metrics.
 6. **Evaluate Impact on Fabric Capacity:** Assess how reports affect the utilization of Fabric resources.
-7. **Optimize Fabric Capacity:** Maximize efficiency of Fabric usage.
-8. **Analyze Report Performance:** Review report load times and interactions.
-9. **Identify Expensive Reports and Visuals:** Analyze reports and visuals with high load time.
-10. **Manage Fabric Capacity Utilization:** Identify the ideal capacity setup across multiple reports, ensuring no under- or over- provisioning.
+7. **Analyze Report Performance:** Review report load times and interactions.
+8. **Identify Expensive Reports and Visuals:** Analyze reports and visuals with high load time.
+9. **Manage Fabric Capacity Utilization:** Identify the ideal capacity setup across multiple reports, ensuring no under- or over- provisioning.
              
 ### System Requirements
 - Compatible browsers: Chrome, Firefox, Edge, Safari
@@ -168,6 +169,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
 ---
 
 ### Create Test Run
+
 **Overview:**
 Creating a test run in LoadFAST allows you to simulate user activity and measure the performance of your reports by specifying the load count. This helps in identifying bottlenecks and optimizing report load times.
 
