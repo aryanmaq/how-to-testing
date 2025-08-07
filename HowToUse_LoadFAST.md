@@ -88,7 +88,7 @@ After clicking **Get Started**, the user will be directed to the main content ar
 
 - **All Collections:** View all available collections.
 - **My Collections:** Access collections created by the user.
-- **Shared with Me:** Access collections shared with the user for collaboration or review.
+- **Shared with Me:** Access collections shared with the user for collaboration.
 - **Favorites:** Quickly access the user's favorite collections.
 - **Search bar:** Use for finding a specific collection.
 - **Filter:** Use for filtering collections (e.g., sort by Name, Report Count, time)
@@ -101,7 +101,7 @@ After clicking **Get Started**, the user will be directed to the main content ar
 
 ### Create Collection
 **Overview:**
-Creating a collection in LoadFAST allows users to group reports and pages for analysis and testing.
+Creating a collection in LoadFAST allows users to group reports for testing.
 
 **Steps:**
 
@@ -122,10 +122,9 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
 3. **Select Reports and Pages:**
 
    - Browse through the available workspaces and reports.
-   - Use filters or the search bar to find specific reports.
+   - Use filters buttons or the search bar to find specific reports.
    - Select the reports and pages you want to include by **checking the boxes** next to them.
-   - RLS report is indicated with an icon. 
-   <figure><img src="../.gitbook/assets/attachment/coll-select-rep.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
+   - RLS report is indicated with an icon. <figure><img src="../.gitbook/assets/attachment/coll-select-rep.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
 
 4. **Configure RLS (If RLS report is selected)**
    **Steps:**
@@ -140,7 +139,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
      <figure><img src="../.gitbook/assets/attachment/coll-conf-RLS.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
 
 5. **Add User Action:**
-  While selecting a report, users can add simple actions like filtering or slicing. These actions are used to calculate the Page Load Time (PLT) based on the selected interactions, providing more accurate performance metrics.
+  While selecting a report, users can add simple actions like filtering. These actions are used to calculate the Page Load Time (PLT) based on the selected interactions, providing more accurate performance metrics.
 
     **Steps:**
     - Click on the dropdown arrow next to the report name, then you will see **+** in user action for each page.
@@ -159,6 +158,7 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
 
 - **Edit Collection:**
    - Collections can be edited, user can change collection name, add or remove reports/pages or update collaborators.
+
    **Note:** Report can be updated only when no Test Run is Created/Triggered inside the collection.
     <figure><img src="../.gitbook/assets/attachment/edit-coll.png" alt="Enter Collection Details"><figcaption></figcaption></figure> 
 
@@ -192,20 +192,24 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
    - Configure the number of users(load count) to simulate for the test run.
    - Use options "Apply to All" or "Percentage Split" to distribute users across assets.
      - **Apply to All:** Equally distribute user count to all reports
-        **Example:** If you enter 5 users, each page of every report will receive 5 users. For instance:
+
+       **Example:** If you enter 5 users, each page of every report will receive 5 users. For instance:
          - "FinancialReport" has 2 pages, so it will receive 2 × 5 = 10 users.
          - "Retail Analysis" has 4 pages, so it will receive 4 × 5 = 20 users.
          - The total load count will be calculated as 10 + 20 = 30 users.
-
          <figure><img src="../.gitbook/assets/attachment/test-apply-all.png" alt="Enter Test Details"><figcaption></figcaption></figure>
+
      - **Percentage Split:** Customizable distribute user count to all reports
-     **Example:** If you enter 10 users and allocate percentages as follows:
+
+       **Example:** If you enter 10 users and allocate percentages as follows:
          - "FinancialReport" is assigned 20%, so it will receive 10 × 20% = 2 users.
          - "Retail Analysis" is assigned 80%, so it will receive 10 × 80% = 8 users.
          - The total load count will be distributed as per the specified percentages.
+
          **Note:** *Ensure the "Total Percentage Count: Effective" is 100.*
 
          <figure><img src="../.gitbook/assets/attachment/test-per-split.png" alt="Enter Test Details"><figcaption></figcaption></figure>
+
    - After entering the test details, click **Save Test** to proceed.
 <figure><img src="../.gitbook/assets/attachment/test-enter-detail.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
@@ -223,10 +227,10 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
         - **Average PLT (Page Load Time):** Shows the average time taken for report pages to load during the test run.
         - **90th Percentile:** Represents the page load time below which 90% of the test results fall. This helps identify outliers and gives a realistic view of user experience.
    - Click on the **+** icon to the left of the created test run name to expand and view all the triggered runs for that Test Run, including their individual statuses and metrics.<figure><img src="../.gitbook/assets/attachment/test-triggered-res.png" alt="Test Results"><figcaption></figcaption></figure>
-   - It displayes the executed result of each run.
-<figure><img src="../.gitbook/assets/attachment/test-triggered.png" alt="Test Results"><figcaption></figcaption></figure>
 
-***
+   - It displayes the executed result of each run.<figure><img src="../.gitbook/assets/attachment/test-triggered.png" alt="Test Results"><figcaption></figcaption></figure>
+
+
 ### All Tests
 
 **Overview:**
@@ -254,9 +258,11 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
      - Below it will show the status of the cluster On/Off. <figure><img src="../.gitbook/assets/attachment/admin-cluster-status.png" alt="Cluster Status"><figcaption></figcaption></figure>
    - Choose a management type (Auto, Manual). <figure><img src="../.gitbook/assets/attachment/admin-cluster.png" alt="Select Type"><figcaption></figcaption></figure>
      - **Auto:** The cluster will automatically shut down after the **Specified Hours** of inactivity.
+
         - To apply this setting, toggle the button **ON** and specify the number of **Hours** after which the cluster should shut down.
-      **Note:** *When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.*
-<figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
+
+        **Note:** *When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.*<figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
+
      - **Manual:** To turn the cluster ON/OFF.
         - Click the toggle button to turn the cluster ON/OFF.<figure><img src="../.gitbook/assets/attachment/admin-manual-off.png" alt="Manually Off"><figcaption></figcaption></figure>
 
@@ -291,7 +297,6 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
 6. Click **Apply** button to execute the selected actions.
 
 
----
 
 ### Insight Report
 
@@ -302,8 +307,7 @@ The Insights Report provides detailed performance metrics for load times, down t
 1. Click on the **Insight Report** icon in the sidebar.  
    <figure><img src="../.gitbook/assets/attachment/insight-enter.png" alt="Insight Click"><figcaption></figcaption></figure>
 
-2. Once the report is loaded, select the desired collection from the **Collection Name** slicer.  
-   <figure><img src="../.gitbook/assets/attachment/insight-selectcollt.png" alt="Insight Click"><figcaption></figcaption></figure>  
+2. Once the report is loaded, select the desired collection from the **Collection Name** slicer.<figure><img src="../.gitbook/assets/attachment/insight-selectcollt.png" alt="Insight Click"><figcaption></figcaption></figure>  
    - Users can also select additional filters such as **Test Run/Workspace Name/Report Name/Page Name** to refine the output.
 
 3. View the metrics for the selected slicers:
@@ -343,18 +347,20 @@ The Insights Report provides detailed performance metrics for load times, down t
 
 7. Drill-through options:
    - **User Action:** Analyze specific user interactions applied during the test run.  
-     <figure><img src="../.gitbook/assets/attachment/insight-useraction1.png" alt="User Action"><figcaption></figcaption></figure>  
-     - After clicking, you will see a detailed view of the selected interaction.  
+     <figure><img src="../.gitbook/assets/attachment/insight-useraction1.png" alt="User Action"><figcaption></figcaption></figure> 
+
+       - After clicking, you will see a detailed view of the selected interaction.  
        <figure><img src="../.gitbook/assets/attachment/insight-useraction2.png" alt="User Action Result"><figcaption></figcaption></figure>
+
    - **Visual:** Focus on individual visuals within a report for detailed performance metrics.  
      <figure><img src="../.gitbook/assets/attachment/insight-9.png" alt="Visual"><figcaption></figcaption></figure>  
-     - After clicking, you will see a detailed view of the selected visual.  
+
+       - After clicking, you will see a detailed view of the selected visual.  
        <figure><img src="../.gitbook/assets/attachment/insight-visual-res.png" alt="Visual"><figcaption></figcaption></figure>
 
 8. Click the **Back** button to return to the previous view.  
    <figure><img src="../.gitbook/assets/attachment/insight-back.png" alt="Back button"><figcaption></figcaption></figure>
 
----
 
 ### Capacity Report
 
