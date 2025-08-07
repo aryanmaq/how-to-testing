@@ -124,7 +124,8 @@ Creating a collection in LoadFAST allows users to group reports and pages for an
    - Browse through the available workspaces and reports.
    - Use filters or the search bar to find specific reports.
    - Select the reports and pages you want to include by **checking the boxes** next to them.
-   - RLS report is indicated with an icon. <figure><img src="../.gitbook/assets/attachment/rls-icon.png" alt="RLS icon"><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/attachment/coll-select-rep.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
+   - RLS report is indicated with an icon. 
+   <figure><img src="../.gitbook/assets/attachment/coll-select-rep.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
 
 4. **Configure RLS (If RLS report is selected)**
    **Steps:**
@@ -361,7 +362,8 @@ The Insights Report provides detailed performance metrics for load times, down t
 The **Capacity Report** provides a comprehensive overview of compute and storage usage across your Microsoft Fabric environment. It includes detailed visualizations, usage metrics, and interactive charts that help monitor capacity performance, detect overages, prevent throttling, and manage storage consumption efficiently.
 
 **Steps:**
-1. Click the **Capacity Report** icon in the left sidebar.<figure><img src="../.gitbook/assets/attachment/attachment/capacity-enter.png" alt="Select Capacity Report"><figcaption></figcaption></figure>
+1. Click the **Capacity Report** icon in the left sidebar.
+<figure><img src="../.gitbook/assets/attachment/attachment/capacity-enter.png" alt="Select Capacity Report"><figcaption></figcaption></figure>
 2. Select the **Capacity Name** from dropdown (e.g., `maqsoftwarefabric`).<figure><img src="../.gitbook/assets/attachment/capacity-select.png" alt="Select Capacity Name"><figcaption></figcaption></figure>
 3. Use the tabs to explore different categories of metrics.
    
