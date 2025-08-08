@@ -8,18 +8,21 @@
   - With the Free Plan, platform fees are not charged; however, Azure infrastructure costs are borne by the user.
 - **Pro Plan:** No limit on the number of users ($1500/month + Azure infrastructure cost)
 
-**Note**: 
+{% hint style="info" %}
+**Note**
 - Free support is available for both plans. 
 - Azure infrastructure costs are mandatory for both plans.
-
+{% endhint %}
 
 **Can I change my plan after purchase?**
 
 Yes, you can upgrade or downgrade your plan at any time through the Azure portal.
 
-> Note: 
+{% hint style="info" %}
+**Note**
 > - The Free (supports up to 50 users) and Pro (supports any number of users) plans on the Azure Marketplace are published as separate plans, each with its own deployment and underlying resources.
 > - If you plan to use the Pro plan, it will need to be deployed separately, but deployment time will reduce significantly.
+{% endhint %}
 
 **How do I upgrade to the Pro plan?**
 
@@ -31,9 +34,11 @@ To upgrade to the Pro plan, follow these steps:
 - Follow the same deployment steps as you did for the **Free** plan deployment.
 - For detailed instructions, refer to the official [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/deploy/deploy-automatically-via-azure-marketplace).
 
+{% hint style="info" %}
 **Note:** 
 - The Pro Plan is deployed in a separate environment, with its own distinct deployment and underlying resources.
 - Data from the **Free Plan** will remain intact, as the Pro Plan operates with separate resources and does not interact with existing Free Plan data.
+{% endhint %}
 
 
 ## Set Up Details
@@ -108,6 +113,7 @@ With GIT integration, LoadFAST automates creating collections, defining tests, a
 <figure><img src="../.gitbook/assets/attachment/faq-test-failed.png" alt="Test Run failed"><figcaption></figcaption></figure>
 
 *Recommended Actions:*
+- Hover over the "Failed" status; an error message box will pop up displaying the issue.
  - **Report Page/Visual broken:** 
    - Open the report in Power BI and ensure all visuals are loading correctly.
    - Fix or remove any broken visuals, then **re-trigger** the test.

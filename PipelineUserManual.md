@@ -37,7 +37,10 @@ Procedure:
 
 - **Service Connection Name**: Assign a descriptive name(e.g.,Pipeline_ServiceConnection).
 
-> ***Note:** If you are unsure about the subscription, resource group, or managed identity to select, please contact the administrator who configured or deployed the LoadFAST tool.*
+{% hint style="info" %}
+***Note:** If you are unsure about the subscription, resource group, or managed identity to select, please contact the administrator who configured or deployed the LoadFAST tool.
+{% endhint %}
+
 
 <figure><img src="../.gitbook/assets/Picture6.png" alt="Configure Connection"><figcaption></figcaption></figure>
 <figure><img src="../.gitbook/assets/Picture7.png" alt="Configure Connection"><figcaption></figcaption></figure>
@@ -90,7 +93,9 @@ Procedure:
     - **execution-pipeline.yml-** This is the main execution file that references the template and contains configurable parameters such as baseURL, tenantId, and test details, which should be tailored to your specific use case.
       > *You only need to update the parameters according to your setup. The structure of the file should remain unchanged.*
 
-***Note:** Ensure that the template: path in the YAML file accurately references the relative location of PipelineCollection.yml.*
+{% hint style="info" %}
+**Note:** Ensure that the template: path in the YAML file accurately references the relative location of PipelineCollection.yml.
+{% endhint %}
 
 **Parameters Description:**
 
@@ -135,7 +140,9 @@ Example:
 
     - **pageId** -- The unique identifier of the specific page within the report.
     
-       ***Note:** If the pageId is incorrect or not found, the PLT (Page Load Time) of the report's default page will be returned.*
+      {% hint style="info" %}
+       **Note:** If the pageId is incorrect or not found, the PLT (Page Load Time) of the report's default page will be returned.
+      {% endhint %}
 
     - **reportName** -- The name of the Power BI report
 
@@ -146,8 +153,11 @@ Example:
     - **loadTestingCount** -- The number of users for the page to be load tested.
 
     - **isRLS** - Indicates whether the report is configured with Row-Level Security (RLS). Use true for RLS-enabled reports and 0 otherwise.
+     
+     {% hint style="info" %}
+     **Note:** The following fields are required **only when isRLS is set to true (RLS-enabled reports)**
+      {% endhint %}
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***Note:** The following fields are required **only when isRLS is set to true (RLS-enabled reports)***
   - **roleName** -- Specifies the name of the RLS role to be applied.
 
   - **roleEmailId** -- Email address of the user associated with the specified role.
@@ -158,7 +168,10 @@ Example:
 
 - **testRunName:** Name of Test Collection.
 
-***Note:** The report or page to be tested must reside within a workspace that contains its associated semantic model. Additionally, the Service Principal (SPN) must have at least Member access to that workspace in order to retrieve the report and perform the PLT (Page Load Time) calculation.*
+
+{% hint style="info" %}
+**Note:** The report or page to be tested must reside within a workspace that contains its associated semantic model. Additionally, the Service Principal (SPN) must have at least Member access to that workspace in order to retrieve the report and perform the PLT (Page Load Time) calculation.
+{% endhint %}
 
 **Step 4: Trigger the Pipeline Execution**
 
@@ -172,7 +185,9 @@ This step involves manually initiating the configured pipeline within Azure DevO
 
 4.  Click **Run** to start the pipeline execution.
 
-  ***Note:** During the first execution, Azure DevOps may prompt for permission to allow the pipeline to access the Azure Key Vault using the configured service connection.*
+  {% hint style="info" %}
+  **Note:** During the first execution, Azure DevOps may prompt for permission to allow the pipeline to access the Azure Key Vault using the configured service connection.
+  {% endhint %}
 
   Once the pipeline starts, the following results can be observed:
 
@@ -227,7 +242,10 @@ At the end of the report, a **summary** is provided:
 
 - **Pass/Fail Count:** Total number of pages that passed or failed
 
-***Note:** If you wish to view detailed test results or check the status of a test run that is still in progress (even after the configured wait time has elapsed), you can do so through the **Insight Report** available on the LoadFAST portal.*
+
+{% hint style="info" %}
+**Note:** If you wish to view detailed test results or check the status of a test run that is still in progress (even after the configured wait time has elapsed), you can do so through the **Insight Report** available on the LoadFAST portal.
+{% endhint %}
 
 To access it:
 
