@@ -100,9 +100,7 @@ After configuring parameters:&#x20;
 
 3. Under **Data souce credentials**, click **Edit credentials**.<figure><img src="../../.gitbook/assets/datasource-edit-credentials.png" alt=""><figcaption></figcaption></figure>
 
-4. Set the authentication method to **OAuth2**, then click **Sign in**.
-
-<figure><img src="../../.gitbook/assets/insight-semantic-config alt=""><figcaption></figcaption></figure>
+4. Set the authentication method to **OAuth2**, then click **Sign in**.<figure><img src="../../.gitbook/assets/insight-semantic-config.png" alt=""><figcaption></figcaption></figure>
 
 5. After signing in, **Refresh** the semantic model.<figure><img src="../../.gitbook/assets/referesh-report.png" alt=""><figcaption></figcaption></figure>
 
