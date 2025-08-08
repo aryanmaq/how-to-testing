@@ -190,7 +190,7 @@ This step involves manually initiating the configured pipeline within Azure DevO
  
 
   {% hint style="info" %}
-    **Note:** During the first execution, Azure DevOps may prompt for permission to allow the pipeline to access the Azure Key Vault using the configured service connection.
+    **Note:**During the first execution, Azure DevOps may prompt for permission to allow the pipeline to access the Azure Key Vault using the configured service connection.
   {% endhint %}
 
 
