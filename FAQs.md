@@ -104,8 +104,8 @@ With GIT integration, LoadFAST automates creating collections, defining tests, a
    - Toggle the cluster status switch to **ON**.<figure><img src="../.gitbook/assets/attachment/Faq-toggle-on.png" alt="Toggle On"><figcaption></figcaption></figure> 
   - Click **Apply** to activate the cluster.
 
-**Test run failed**  
-![Test Run failed](attachment/faq-test-failed.png)
+**Test run failed**
+<figure><img src="../.gitbook/assets/attachment/faq-test-failed.png" alt="Test Run failed"><figcaption></figcaption></figure>
 
 *Recommended Actions:*
  - **Report Page/Visual broken:** 
@@ -118,11 +118,11 @@ With GIT integration, LoadFAST automates creating collections, defining tests, a
    - Ensure that tenant settings are configured correctly. For detailed instructions, refer to the [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/prepare/pre-deployment/set-up-and-configure-the-power-bi-tenant-settings#configure-the-tenant-settings).
 
 **Insight Report fetch failed**  
-![Insight Report Loading Failed](attachment/faq-Insight-not-loded.png)
+<figure><img src="../.gitbook/assets/attachment/faq-Insight-not-loded.png" alt="Insight Report Loading Failed"><figcaption></figcaption></figure>
 
 *Recommended Actions:*   
 - Review your configuration details in Admin Settings and update them if necessary.  
-![Update Insight Details](attachment/faq-correct-insightdetail.png)
+<figure><img src="../.gitbook/assets/attachment/faq-correct-insightdetail.png" alt="Update Insight Details"><figcaption></figcaption></figure>
 
 - Click **Apply** to save the changes.
 
@@ -135,13 +135,13 @@ With GIT integration, LoadFAST automates creating collections, defining tests, a
 - For step-by-step guide, refer to: [LoadFAST: Technical Documentation](https://maqsoftware.gitbook.io/loadfast-technical-documentation/setting-up/configure/insight-report)
 
 **Capacity Report fetch failed**  
-![Capacity Report Loading Failed](attachment/faq-cap-failed.png)
+<figure><img src="../.gitbook/assets/attachment/faq-cap-failed.png" alt="Capacity Report Loading Failed"><figcaption></figcaption></figure>
 
 *Recommended Actions:*  
 
 
 - Review your configuration details in Admin Settings and update them if necessary.  
-![Update Capacity Details](attachment/faq-capacity-detail-update.png)
+<figure><img src="../.gitbook/assets/attachment/faq-capacity-detail-update.png" alt="Update Capacity Details"><figcaption></figcaption></figure>
 
 - Click **Apply** to save the changes.
 
@@ -249,7 +249,7 @@ If you encounter this message, please contact our support team at [loadfast@maqs
   - It represents the **calculated distribution** of user load across clusters, based on the **percentage values** you’ve entered for each. It should be *100* to create a test run.
 
 **I clicked the Trigger button, but nothing happened. Why?**
-  - If you see a **triggered successful** toast, it will *display the result after some time*. Just refresh the page using ![Refresh Icon](attachment/refresh.png); otherwise, check the cluster from admin settings.
+  - If you see a **triggered successful** toast, it will *display the result after some time*. Just refresh the page using <figure><img src="../.gitbook/assets/attachment/refresh.png" alt="Refresh Icon"><figcaption></figcaption></figure>; otherwise, check the cluster from admin settings.
 
 **Why is the Trigger button disabled?**
   - Either you have only **Viewer** access or the **Clusters** are off; start the cluster from admin settings.
