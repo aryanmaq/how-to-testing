@@ -1,4 +1,4 @@
-# LoadFAST FAQ's
+# FAQ's
 
 ## Subscription Plans
 
