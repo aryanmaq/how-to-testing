@@ -140,9 +140,9 @@ Example:
 
     - **pageId** -- The unique identifier of the specific page within the report.
     
-      {% hint style="info" %}
-       **Note:** If the pageId is incorrect or not found, the PLT (Page Load Time) of the report's default page will be returned.
-      {% endhint %}
+    {% hint style="info" %}
+    **Note:** If the pageId is incorrect or not found, the PLT (Page Load Time) of the report's default page will be returned.
+    {% endhint %}
 
     - **reportName** -- The name of the Power BI report
 
