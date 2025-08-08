@@ -94,7 +94,7 @@ After configuring parameters:&#x20;
 ## Installing the Microsoft Fabric Insight Metrics App
 
 1. Follow the comprehensive installation steps provided in the official [Microsoft documentation.](https://learn.microsoft.com/en-us/fabric/enterprise/metrics-app-install).
-2. Once installed, navigate to the **Settings** of the semantic model associated with the capacity report to refresh it.
+2. Once installed, navigate to the **Settings** of the semantic model associated with the insight report to refresh it.
 
 <figure><img src="../../.gitbook/assets/semantic-model-setting.png" alt=""><figcaption></figcaption></figure>
 
