@@ -117,7 +117,9 @@ Creating a collection in LoadFAST allows users to group reports for testing.
      - **Viewer:** Has permission to view the collection and see test runs inside the collection.
    - After entering the collection details, click **Continue** to proceed to the next step.
   
+   {% hint style="info" %}
     **Note:** The **Continue** button will remain disabled until a valid collaborator email address is provided.<figure><img src="../.gitbook/assets/attachment/coll-enterdetail.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
+   {% endhint %}
 
 3. **Select Reports and Pages:**
 
@@ -131,10 +133,11 @@ Creating a collection in LoadFAST allows users to group reports for testing.
    - Click on **Configure RLS** button.<figure><img src="../.gitbook/assets/attachment/coll-click-config-rls.png" alt="Configure RLS"><figcaption></figcaption></figure>
    - Select **Role Name** from Dropdown box
    - Enter the **Email** address.
-    
+    {% hint style="info" %}
      **Note:** 
        - If you are an Admin/Member of workspace, you can test on behalf of any user.
        -  For all other users, their own email will be preselected by default
+       {% endhint %}
      
      <figure><img src="../.gitbook/assets/attachment/coll-conf-RLS.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
 
@@ -159,8 +162,10 @@ Creating a collection in LoadFAST allows users to group reports for testing.
 - **Edit Collection:**
    - Collections can be edited, user can change collection name, add or remove reports/pages or update collaborators.
 
+   {% hint style="info" %}
    **Note:** Report can be updated only when no Test Run is Created/Triggered inside the collection.
     <figure><img src="../.gitbook/assets/attachment/edit-coll.png" alt="Enter Collection Details"><figcaption></figcaption></figure> 
+    {% endhint %}
 
 - **Table View:**
    - User can switch to Table View for a tabular representation of data, making it easier to view.
@@ -189,21 +194,24 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
    - Configure the number of users(load count) to simulate for the test run.
    - Use options "Apply to All" or "Percentage Split" to distribute users across assets.
      - **Apply to All:** Equally distribute user count to all reports
-
+      {% hint style="info" %}
        **Example:** If you enter 5 users, each page of every report will receive 5 users. For instance:
          - "FinancialReport" has 2 pages, so it will receive 2 × 5 = 10 users.
          - "Retail Analysis" has 4 pages, so it will receive 4 × 5 = 20 users.
          - The total load count will be calculated as 10 + 20 = 30 users.
+         {% endhint %}
          <figure><img src="../.gitbook/assets/attachment/test-apply-all.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
      - **Percentage Split:** Customizable distribute user count to all reports
-
+      {% hint style="info" %}
        **Example:** If you enter 10 users and allocate percentages as follows:
          - "FinancialReport" is assigned 20%, so it will receive 10 × 20% = 2 users.
          - "Retail Analysis" is assigned 80%, so it will receive 10 × 80% = 8 users.
          - The total load count will be distributed as per the specified percentages.
-
+      {% endhint %}
+         {% hint style="info" %}
          **Note:** *Ensure the "Total Percentage Count: Effective" is 100.*
+         {% endhint %}
 
          <figure><img src="../.gitbook/assets/attachment/test-per-split.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
@@ -258,7 +266,10 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
 
         - To apply this setting, toggle the button **ON** and specify the number of **Hours** after which the cluster should shut down.
 
+
+       {% hint style="info" %}
         **Note:** *When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.*<figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
+        {% endhint %}
 
      - **Manual:** To turn the cluster ON/OFF.
         - Click the toggle button to turn the cluster ON/OFF.<figure><img src="../.gitbook/assets/attachment/admin-manual-off.png" alt="Manually Off"><figcaption></figcaption></figure>
@@ -272,9 +283,11 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
      - **Dataset ID:** Unique identifier for the dataset powering the report.
      - **Dataset Name (Optional):** For reference or clarity.
      
+     {% hint style="info" %}
       **Note:** 
       - The Service Principal (SPN) used must have Admin or Member permissions on the workspace containing the Insight report.
       - The report and its dataset must also be in the same workspace.
+      {% endhint %}
 
      <figure><img src="../.gitbook/assets/attachment/admin-insight.png" alt="Insight Report"><figcaption></figcaption></figure>
 
