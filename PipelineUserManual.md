@@ -189,9 +189,9 @@ This step involves manually initiating the configured pipeline within Azure DevO
 4.  Click **Run** to start the pipeline execution.
  
 
-  {% hint style="info" %}
-    **Note:**During the first execution, Azure DevOps may prompt for permission to allow the pipeline to access the Azure Key Vault using the configured service connection.
-  {% endhint %}
+{% hint style="info" %}
+  **Note:**During the first execution, Azure DevOps may prompt for permission to allow the pipeline to access the Azure Key Vault using the configured service connection.
+{% endhint %}
 
 
   Once the pipeline starts, the following results can be observed:
