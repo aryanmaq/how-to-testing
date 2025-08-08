@@ -180,7 +180,7 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
     - Click on created collection to enter detail page.
 <figure><img src="../.gitbook/assets/attachment/coll-click.png" alt="Enter Collection detailed Page"><figcaption></figcaption></figure>
 
-1. **Click on + New Test:**
+2. **Click on + New Test:**
    - On your collection’s detail page, click the **+ New Test** button to start creating a new test run.
 <figure><img src="../.gitbook/assets/attachment/coll-create-test.png" alt="Create Test Run"><figcaption></figcaption></figure>
 
@@ -211,7 +211,7 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
          <figure><img src="../.gitbook/assets/attachment/test-per-split.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
    - After entering the test details, click **Save Test** to proceed.
-<figure><img src="../.gitbook/assets/attachment/test-enter-detail.png" alt="Enter Test Details"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/test-enter-detail.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
 5. **Review and Trigger Test Run:**
    - Your test run will appear within the collection.
