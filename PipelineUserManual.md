@@ -140,9 +140,9 @@ Example:
 
     - **pageId** -- The unique identifier of the specific page within the report.
     
-      {% hint style="info" %}
-       **Note:** If the pageId is incorrect or not found, the PLT (Page Load Time) of the report's default page will be returned.
-      {% endhint %}
+    {% hint style="info" %}
+    **Note:** If the pageId is incorrect or not found, the PLT (Page Load Time) of the report's default page will be returned.
+    {% endhint %}
 
     - **reportName** -- The name of the Power BI report
 
@@ -154,9 +154,11 @@ Example:
 
     - **isRLS** - Indicates whether the report is configured with Row-Level Security (RLS). Use true for RLS-enabled reports and 0 otherwise.
      
-     {% hint style="info" %}
+
+    {% hint style="info" %}
      **Note:** The following fields are required **only when isRLS is set to true (RLS-enabled reports)**
-      {% endhint %}
+    {% endhint %}
+
 
   - **roleName** -- Specifies the name of the RLS role to be applied.
 
@@ -170,8 +172,9 @@ Example:
 
 
 {% hint style="info" %}
-**Note:** The report or page to be tested must reside within a workspace that contains its associated semantic model. Additionally, the Service Principal (SPN) must have at least Member access to that workspace in order to retrieve the report and perform the PLT (Page Load Time) calculation.
+  **Note:** The report or page to be tested must reside within a workspace that contains its associated semantic model. Additionally, the Service Principal (SPN) must have at least Member access to that workspace in order to retrieve the report and perform the PLT (Page Load Time) calculation.
 {% endhint %}
+
 
 **Step 4: Trigger the Pipeline Execution**
 
@@ -184,10 +187,12 @@ This step involves manually initiating the configured pipeline within Azure DevO
 3.  Choose the appropriate repository and select the execution-pipeline.yml file from your feature branch.
 
 4.  Click **Run** to start the pipeline execution.
+ 
 
   {% hint style="info" %}
-  **Note:** During the first execution, Azure DevOps may prompt for permission to allow the pipeline to access the Azure Key Vault using the configured service connection.
+    **Note:** During the first execution, Azure DevOps may prompt for permission to allow the pipeline to access the Azure Key Vault using the configured service connection.
   {% endhint %}
+
 
   Once the pipeline starts, the following results can be observed:
 
