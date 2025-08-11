@@ -131,15 +131,17 @@ Creating a collection in LoadFAST allows users to group reports for testing.
    - RLS report is indicated with an icon. <figure><img src="../.gitbook/assets/attachment/coll-select-rep.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
 
 4. **Configure RLS (If RLS report is selected)**
+
    **Steps:**
    - Click on **Configure RLS** button.<figure><img src="../.gitbook/assets/attachment/coll-click-config-rls.png" alt="Configure RLS"><figcaption></figcaption></figure>
    - Select **Role Name** from Dropdown box
    - Enter the **Email** address.
-    {% hint style="info" %}
+
+   {% hint style="info" %}
      **Note:** 
        - If you are an Admin/Member of workspace, you can test on behalf of any user.
        -  For all other users, their own email will be preselected by default
-       {% endhint %}
+   {% endhint %}
      
      <figure><img src="../.gitbook/assets/attachment/coll-conf-RLS.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
 
