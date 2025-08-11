@@ -279,9 +279,11 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
    {% endhint %}
 
    <figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
-      
+
      - **Manual:** To turn the cluster ON/OFF.
-        - Click the toggle button to turn the cluster ON/OFF.<figure><img src="../.gitbook/assets/attachment/admin-manual-off.png" alt="Manually Off"><figcaption></figcaption></figure>
+        - Click the toggle button to turn the cluster ON/OFF.
+
+   <figure><img src="../.gitbook/assets/attachment/admin-manual-off.png" alt="Manually Off"><figcaption></figcaption></figure>
 
 
 3. **Insights Report:** Click on **Insights Report** tab<figure><img src="../.gitbook/assets/attachment/admin-insight-enter.png" alt="Insight Enter"><figcaption></figcaption></figure>
