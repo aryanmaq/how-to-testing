@@ -152,10 +152,7 @@ Example:
 
     - **isRLS** - Indicates whether the report is configured with Row-Level Security (RLS). Use true for RLS-enabled reports and 0 otherwise.
      
-
-      {% hint style="info" %}
-      **Note:** The following fields are required **only when isRLS is set to true (RLS-enabled reports)**
-      {% endhint %}
+    > **Note:** The following fields are required **only when isRLS is set to true (RLS-enabled reports)**
 
   - **roleName** -- Specifies the name of the RLS role to be applied.
 
