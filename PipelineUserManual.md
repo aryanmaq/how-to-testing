@@ -38,7 +38,7 @@ Procedure:
 - **Service Connection Name**: Assign a descriptive name(e.g.,Pipeline_ServiceConnection).
 
 {% hint style="info" %}
-***Note:** If you are unsure about the subscription, resource group, or managed identity to select, please contact the administrator who configured or deployed the LoadFAST tool.
+**Note:** If you are unsure about the subscription, resource group, or managed identity to select, please contact the administrator who configured or deployed the LoadFAST tool.
 {% endhint %}
 
 
