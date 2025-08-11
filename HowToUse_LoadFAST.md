@@ -202,25 +202,25 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
      - **Apply to All:** Equally distribute user count to all reports
 
       {% hint style="info" %}
-       **Example:** If you enter 5 users, each page of every report will receive 5 users. For instance:
-         - "FinancialReport" has 2 pages, so it will receive 2 × 5 = 10 users.
-         - "Retail Analysis" has 4 pages, so it will receive 4 × 5 = 20 users.
-         - The total load count will be calculated as 10 + 20 = 30 users.
-         {% endhint %}
+      **Example:** If you enter 5 users, each page of every report will receive 5 users. For instance:
+      - "FinancialReport" has 2 pages, so it will receive 2 × 5 = 10 users.
+      - "Retail Analysis" has 4 pages, so it will receive 4 × 5 = 20 users.
+      - The total load count will be calculated as 10 + 20 = 30 users.
+      {% endhint %}
 
          <figure><img src="../.gitbook/assets/attachment/test-apply-all.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
      - **Percentage Split:** Customizable distribute user count to all reports
 
       {% hint style="info" %}
-       **Example:** If you enter 10 users and allocate percentages as follows:
-         - "FinancialReport" is assigned 20%, so it will receive 10 × 20% = 2 users.
-         - "Retail Analysis" is assigned 80%, so it will receive 10 × 80% = 8 users.
-         - The total load count will be distributed as per the specified percentages.
+      **Example:** If you enter 10 users and allocate percentages as follows:
+      - "FinancialReport" is assigned 20%, so it will receive 10 × 20% = 2 users.
+      - "Retail Analysis" is assigned 80%, so it will receive 10 × 80% = 8 users.
+      - The total load count will be distributed as per the specified percentages.
       {% endhint %}
 
          {% hint style="info" %}
-            **Note:** *Ensure the "Total Percentage Count: Effective" is 100.*
+         **Note:** *Ensure the "Total Percentage Count: Effective" is 100.*
          {% endhint %}
 
          <figure><img src="../.gitbook/assets/attachment/test-per-split.png" alt="Enter Test Details"><figcaption></figcaption></figure>
