@@ -274,11 +274,11 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
 
         - To apply this setting, toggle the button **ON** and specify the number of **Hours** after which the cluster should shut down.
 
-   {% hint style="info" %}
-   **Note:** When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.
-   {% endhint %}
+      {% hint style="info" %}
+      **Note:** When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.
+      {% endhint %}
 
-   <figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
+      <figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
 
      - **Manual:** To turn the cluster ON/OFF.
         - Click the toggle button to turn the cluster ON/OFF.
