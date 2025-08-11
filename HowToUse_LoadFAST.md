@@ -211,17 +211,16 @@ Creating a test run in LoadFAST allows you to simulate user activity and measure
 
      - **Percentage Split:** Customizable distribute user count to all reports
 
-      {% hint style="info" %}
-      **Example:** If you enter 10 users and allocate percentages as follows:
-      - "FinancialReport" is assigned 20%, so it will receive 10 × 20% = 2 users.
-      - "Retail Analysis" is assigned 80%, so it will receive 10 × 80% = 8 users.
-      - The total load count will be distributed as per the specified percentages.
-      {% endhint %}
+   {% hint style="info" %}
+   **Example:** If you enter 10 users and allocate percentages as follows:
+   - "FinancialReport" is assigned 20%, so it will receive 10 × 20% = 2 users.
+   - "Retail Analysis" is assigned 80%, so it will receive 10 × 80% = 8 users.
+   - The total load count will be distributed as per the specified percentages.
+   {% endhint %}
 
-         {% hint style="info" %}
-         **Note:** *Ensure the "Total Percentage Count: Effective" is 100.*
-         {% endhint %}
-
+   {% hint style="info" %}
+   **Note:** *Ensure the "Total Percentage Count: Effective" is 100.*
+   {% endhint %}
    <figure><img src="../.gitbook/assets/attachment/test-per-split.png" alt="Enter Test Details"><figcaption></figcaption></figure>
 
    - After entering the test details, click **Save Test** to proceed.
