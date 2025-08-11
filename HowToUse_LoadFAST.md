@@ -120,7 +120,8 @@ Creating a collection in LoadFAST allows users to group reports for testing.
    {% hint style="info" %}
       **Note:** The **Continue** button will remain disabled until a valid collaborator email address is provided.
    {% endhint %}
-    <figure><img src="../.gitbook/assets/attachment/coll-enterdetail.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
+
+   <figure><img src="../.gitbook/assets/attachment/coll-enterdetail.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
    
 
 3. **Select Reports and Pages:**
@@ -273,13 +274,10 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
 
         - To apply this setting, toggle the button **ON** and specify the number of **Hours** after which the cluster should shut down.
 
-
-      % hint style="info" %}
+      {% hint style="info" %}
          **Note:** When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.
-      {% endhint %}
-        <figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
+      {% endhint %}<figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
       
-
      - **Manual:** To turn the cluster ON/OFF.
         - Click the toggle button to turn the cluster ON/OFF.<figure><img src="../.gitbook/assets/attachment/admin-manual-off.png" alt="Manually Off"><figcaption></figcaption></figure>
 
@@ -298,7 +296,7 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
       - The report and its dataset must also be in the same workspace.
    {% endhint %}
 
-     <figure><img src="../.gitbook/assets/attachment/admin-insight.png" alt="Insight Report"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/admin-insight.png" alt="Insight Report"><figcaption></figcaption></figure>
 
 4. **Capacity Report:** Click on the **Capacity Report** tab. <figure><img src="../.gitbook/assets/attachment/admin-capapcity-enter.png" alt="Select Capacity"><figcaption></figcaption></figure>
    - Set up the Capacity Report by providing:
