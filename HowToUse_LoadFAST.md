@@ -138,12 +138,12 @@ Creating a collection in LoadFAST allows users to group reports for testing.
    - Enter the **Email** address.
 
    {% hint style="info" %}
-     **Note:** 
+     **Note:**
        - If you are an Admin/Member of workspace, you can test on behalf of any user.
        -  For all other users, their own email will be preselected by default
    {% endhint %}
      
-     <figure><img src="../.gitbook/assets/attachment/coll-conf-RLS.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
+   <figure><img src="../.gitbook/assets/attachment/coll-conf-RLS.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
 
 5. **Add User Action:**
   While selecting a report, users can add simple actions like filtering. These actions are used to calculate the Page Load Time (PLT) based on the selected interactions, providing more accurate performance metrics.
