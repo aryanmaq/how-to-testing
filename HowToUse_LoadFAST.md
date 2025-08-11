@@ -139,8 +139,8 @@ Creating a collection in LoadFAST allows users to group reports for testing.
 
    {% hint style="info" %}
    **Note:**
-      - If you are an Admin/Member of workspace, you can test on behalf of any user.
-      -  For all other users, their own email will be preselected by default
+   - If you are an Admin/Member of workspace, you can test on behalf of any user.
+   -  For all other users, their own email will be preselected by default
    {% endhint %}
      
    <figure><img src="../.gitbook/assets/attachment/coll-conf-RLS.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
