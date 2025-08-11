@@ -118,7 +118,7 @@ Creating a collection in LoadFAST allows users to group reports for testing.
    - After entering the collection details, click **Continue** to proceed to the next step.
   
    {% hint style="info" %}
-    **Note:** The **Continue** button will remain disabled until a valid collaborator email address is provided.
+      **Note:** The **Continue** button will remain disabled until a valid collaborator email address is provided.
    {% endhint %}
     <figure><img src="../.gitbook/assets/attachment/coll-enterdetail.png" alt="Enter Collection Details"><figcaption></figcaption></figure>
    
@@ -274,8 +274,8 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
         - To apply this setting, toggle the button **ON** and specify the number of **Hours** after which the cluster should shut down.
 
 
-       % hint style="info" %}
-        **Note:** *When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.
+      % hint style="info" %}
+         **Note:** When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.
       {% endhint %}
         <figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
       
