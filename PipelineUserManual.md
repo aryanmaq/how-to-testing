@@ -140,9 +140,7 @@ Example:
 
     - **pageId** -- The unique identifier of the specific page within the report.
     
-      {% hint style="info" %}
-      **Note:** If the pageId is incorrect or not found, the PLT (Page Load Time) of the report's default page will be returned.
-      {% endhint %}
+    > **Note:** If the pageId is incorrect or not found, the PLT (Page Load Time) of the report's default page will be returned.
 
     - **reportName** -- The name of the Power BI report
 
@@ -188,7 +186,7 @@ This step involves manually initiating the configured pipeline within Azure DevO
 4.  Click **Run** to start the pipeline execution.
  
 {% hint style="info" %}
-**Note:**During the first execution, Azure DevOps may prompt for permission to allow the pipeline to access the Azure Key Vault using the configured service connection.
+**Note:** During the first execution, Azure DevOps may prompt for permission to allow the pipeline to access the Azure Key Vault using the configured service connection.
 {% endhint %}
 
   Once the pipeline starts, the following results can be observed:
