@@ -265,22 +265,29 @@ The Admin Settings page allows users to manage Kubernetes clusters, Insight Repo
 
 1. Click on the **Admin Settings** icon from the sidebar. <figure><img src="../.gitbook/assets/attachment/admin-enter.png" alt="Select Admin Settings"><figcaption></figcaption></figure>
 
-2. **Cluster Management:**
-   - Select a **cluster** from the dropdown.<figure><img src="../.gitbook/assets/attachment/admin-select-cluster.png" alt="Select Cluster"><figcaption></figcaption></figure>
-   - View the cluster’s current status.
-     - Below it will show the status of the cluster On/Off. <figure><img src="../.gitbook/assets/attachment/admin-cluster-status.png" alt="Cluster Status"><figcaption></figcaption></figure>
-   - Choose a management type (Auto, Manual). <figure><img src="../.gitbook/assets/attachment/admin-cluster.png" alt="Select Type"><figcaption></figcaption></figure>
-     - **Auto:** The cluster will automatically shut down after the **Specified Hours** of inactivity.
+2. **Cluster Management**
 
-        - To apply this setting, toggle the button **ON** and specify the number of **Hours** after which the cluster should shut down.
+- **Select a cluster** from the dropdown.  
+  <figure><img src="../.gitbook/assets/attachment/admin-select-cluster.png" alt="Select Cluster"><figcaption></figcaption></figure>
 
-      {% hint style="info" %}
-         **Note:** When Auto is "ON", the cluster will automatically shut down after the specified hours of inactivity. However, you must manually turn the cluster "ON" to start it initially.
-      {% endhint %}<figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
-      
-     - **Manual:** To turn the cluster ON/OFF.
-        - Click the toggle button to turn the cluster ON/OFF.<figure><img src="../.gitbook/assets/attachment/admin-manual-off.png" alt="Manually Off"><figcaption></figcaption></figure>
+- **View the cluster’s current status**  
+  The status (**On**/**Off**) is displayed below the cluster name.  
+  <figure><img src="../.gitbook/assets/attachment/admin-cluster-status.png" alt="Cluster Status"><figcaption></figcaption></figure>
 
+- **Choose a management type** – *Auto* or *Manual*  
+  <figure><img src="../.gitbook/assets/attachment/admin-cluster.png" alt="Select Type"><figcaption></figcaption></figure>
+
+  - **Auto** – The cluster automatically shuts down after the specified number of hours of inactivity.  
+    - To enable this, toggle the switch **ON** and set the number of **Hours** after which the cluster should shut down.  
+
+    {% hint style="info" %}
+    **Note:** When Auto is "ON", the cluster will automatically shut down after the specified inactivity period. You must still turn the cluster **ON** manually to start it initially.
+    {% endhint %}
+    <figure><img src="../.gitbook/assets/attachment/admin-autoclus.png" alt="Auto Cluster"><figcaption></figcaption></figure>
+
+  - **Manual** – Manually control the cluster power state.  
+    - Use the toggle switch to turn the cluster **ON** or **OFF**.  
+    <figure><img src="../.gitbook/assets/attachment/admin-manual-off.png" alt="Manually Off"><figcaption></figcaption></figure>
 
 3. **Insights Report:** Click on **Insights Report** tab<figure><img src="../.gitbook/assets/attachment/admin-insight-enter.png" alt="Insight Enter"><figcaption></figcaption></figure>
    - Configure the Insights Report by entering the following fields:
