@@ -167,7 +167,7 @@ Creating a collection in LoadFAST allows users to group reports for testing.
    - Collections can be edited, user can change collection name, add or remove reports/pages or update collaborators.
 
    {% hint style="info" %}
-   **Note:**Report can be updated only when no Test Run is Created/Triggered inside the collection.
+      **Note:** Report can be updated only when no Test Run is Created/Triggered inside the collection.
    {% endhint %}
 
    <figure><img src="../.gitbook/assets/attachment/edit-coll.png" alt="Enter Collection Details"><figcaption></figcaption></figure> 
